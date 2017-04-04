@@ -1,0 +1,42 @@
+
+/*Colors*/
+$white: #fff;
+$black: #000;
+$colorSecondary: #7E7E7E;
+
+/*measurements*/
+$gutter: 1rem;
+
+/*fonts*/
+$fonthero: 'Permanent Marker', cursive;
+
+@import 'resets';
+@import 'nav';
+
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  background-color: $colorSecondary;
+  font-family: sans-serif;
+  padding: 0 $gutter;
+
+  &-left {
+    margin: $gutter 0;
+  }
+
+  &-right {
+
+  }
+}
+
+.social-list {
+  display: flex;
+
+  &__item {
+    margin: 0 $gutter;
+  }
+}
