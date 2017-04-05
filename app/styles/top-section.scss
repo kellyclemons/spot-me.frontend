@@ -3,7 +3,7 @@
 .top {
   background: url('/images/hiking.jpg') no-repeat center center fixed;
   background-size: cover;
-  // filter: blur(80%);
+  // filter: blur(5px);
 }
 
 .main-heading {
@@ -78,6 +78,10 @@
     font-family: 'Permanent Marker', cursive;
     font-size: 3rem;
     box-shadow: 0.2rem 0.2rem 0.4rem rgba(0, 0, 0, 0.5);
+
+    &:hover {
+      cursor: pointer;
+    }
   }
 }
 
@@ -99,14 +103,14 @@
 .grid {
   display: flex;
   flex-wrap: none;
-  margin: 0 0.5rem;
+  margin: 0 0.25rem;
 
 
   &__item {
     position: relative;
     flex-basis: calc(100% / 4 - 2rem);
     flex-grow: 1;
-    margin: 1rem 0.5rem;
+    margin: 0.5rem 0.25rem;
   }
 
   &__image {

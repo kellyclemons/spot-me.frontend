@@ -4,6 +4,10 @@
 
   background: green;
 
+  &:hover {
+    filter: opacity(40%);
+  }
+
   &__image {
     position: absolute;
     top: 0;
@@ -19,6 +23,5 @@
   &__text {
     display: none;
   }
-
 
 }
