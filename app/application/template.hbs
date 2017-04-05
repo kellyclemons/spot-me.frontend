@@ -1,14 +1,17 @@
 <div class="page">
   <nav class="top-nav">
     <div class="nav-left">
-      {{fa-icon "handshake-o"}}
-      <span class="nav-left__name">Spot Me</span>
+      {{!-- Not sure about text decoration here or what's
+      causing purple color. Seems that the link-to element
+      has inherent styling --}}
+      {{#link-to 'index'}} {{fa-icon "handshake-o"}} {{/link-to}}
+      {{#link-to 'index'}} <span class="nav-left__name">Spot Me</span> {{/link-to}}
     </div>
 
     <div class="nav-right">
       <ul class="nav-list">
         <li class="nav-list__item">About Us</li>
-        <li class="nav-list__item">Login/Register</li>
+        {{#link-to 'login'}}<li class="nav-list__item">Login/Register</li>{{/link-to}}
       </ul>
     </div>
   </nav>
