@@ -5,6 +5,8 @@
   background-color: $colorSecondary;
   font-family: $font-nav;
   padding: 0 $gutter;
+  color: $white;
+  opacity: .3;
 
   &-left {
     margin: $gutter 0;

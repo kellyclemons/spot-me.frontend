@@ -5,6 +5,13 @@
   flex-direction: row;
   justify-content: space-between;
   font-size: 1.5rem;
+  color: $white;
+  opacity: .3;
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
 }
 
 .nav-left {
@@ -16,7 +23,7 @@
   }
 
   &__name {
-    font-family: $fonthero;
+    font-family: $font-nav;
     padding-left: $gutter / 2;
     text-decoration: none;
   }
@@ -33,7 +40,8 @@
 
   &__item {
     // font-family: sans-serif;
-    font-family: 'Julius Sans One', sans-serif;
+    font-family: $font-nav;
     margin: 0 $gutter;
+    font-size: 1rem;
   }
 }
