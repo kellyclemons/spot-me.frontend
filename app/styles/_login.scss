@@ -1,0 +1,60 @@
+.login-container {
+  max-width: 40rem;
+  margin: auto;
+}
+
+.login-card {
+  // Why won't this work?
+  background-color: #e4dddd;
+  font-family: $font-nav;
+  border: 1px solid $colorSecondary;
+
+  &__heading {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    border-bottom: 1px solid $colorSecondary;
+    //
+    // > * + * {
+    //
+    // }
+  }
+
+  &__content {
+    display: flex;
+    justify-content: center;
+    width: 70%;
+    margin: auto;
+  }
+
+  &__form {
+    width: 100%;
+
+    p {
+      margin: ($gutter) 0;
+    }
+  }
+
+  &__control {
+    width: 100%;
+    font-size: 1rem;
+    font-family: $font-nav;
+
+  }
+
+  &__checkbox {
+    float: left;
+  }
+
+  &__submit {
+    width: 100%;
+    padding: $gutter / 2;
+    background: 0;
+    margin-bottom: $gutter;
+    font-size: 1rem;
+  }
+}
+
+.forgot-password {
+  float: right;
+}

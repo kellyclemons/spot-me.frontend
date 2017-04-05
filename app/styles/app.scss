@@ -10,12 +10,16 @@ $gutter: 1rem;
 
 /*fonts*/
 $fonthero: 'Permanent Marker', cursive;
-$font-nav: 'Julius Sans One', sans-serif;
+$font-nav: 'Raleway', sans-serif;
 
 @import 'resets';
 @import 'nav';
 @import 'footer';
+@import 'login';
 
-fa-icon {
-  text-decoration: none;
+
+
+
+.login-card {
+  background-color: $white;
 }
