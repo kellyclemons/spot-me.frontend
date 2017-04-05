@@ -12,9 +12,17 @@ $gutter: 1rem;
 $fonthero: 'Permanent Marker', cursive;
 $font-nav: 'Julius Sans One', sans-serif;
 
+@import 'box-sizing';
+@import 'css-resets';
+@import 'double-container';
+@import 'top-section';
+// @import 'middle-section';
+// @import 'sidebar';
+// @import 'bottom-section';
 @import 'resets';
 @import 'nav';
 @import 'footer';
+@import 'components/square';
 
 fa-icon {
   text-decoration: none;
