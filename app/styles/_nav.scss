@@ -1,6 +1,6 @@
 .top-nav {
   background-color: $colorSecondary;
-
+  line-height: 2rem;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -31,7 +31,8 @@
   margin: $gutter 0;
 
   &__item {
-    font-family: sans-serif;
+    // font-family: sans-serif;
+    font-family: 'Julius Sans One', sans-serif;
     margin: 0 $gutter;
   }
 }
