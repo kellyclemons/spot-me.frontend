@@ -1,0 +1,24 @@
+.square {
+  position: relative;
+  padding-top: 100%;
+
+  background: green;
+
+  &__image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    &:hover {
+      filter: opacity(100%);
+    }
+  }
+
+  &__text {
+    display: none;
+  }
+
+
+}

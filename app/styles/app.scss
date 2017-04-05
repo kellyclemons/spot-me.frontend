@@ -10,8 +10,16 @@ $gutter: 1rem;
 /*fonts*/
 $fonthero: 'Permanent Marker', cursive;
 
+@import 'box-sizing';
+@import 'css-resets';
+@import 'double-container';
+@import 'top-section';
+// @import 'middle-section';
+// @import 'sidebar';
+// @import 'bottom-section';
 @import 'resets';
 @import 'nav';
+@import 'components/square';
 
 
 .footer {
