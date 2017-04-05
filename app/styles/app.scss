@@ -1,4 +1,5 @@
 
+
 /*Colors*/
 $white: #fff;
 $black: #000;
@@ -9,6 +10,7 @@ $gutter: 1rem;
 
 /*fonts*/
 $fonthero: 'Permanent Marker', cursive;
+$font-nav: 'Julius Sans One', sans-serif;
 
 @import 'box-sizing';
 @import 'css-resets';
@@ -19,32 +21,9 @@ $fonthero: 'Permanent Marker', cursive;
 // @import 'bottom-section';
 @import 'resets';
 @import 'nav';
+@import 'footer';
 @import 'components/square';
 
-
-.footer {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-  position: fixed;
-  bottom: 0;
-  background-color: $colorSecondary;
-  font-family: sans-serif;
-  padding: 0 $gutter;
-
-  &-left {
-    margin: $gutter 0;
-  }
-
-  &-right {
-
-  }
-}
-
-.social-list {
-  display: flex;
-
-  &__item {
-    margin: 0 $gutter;
-  }
+fa-icon {
+  text-decoration: none;
 }
