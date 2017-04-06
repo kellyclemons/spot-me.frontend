@@ -1,6 +1,6 @@
 .location-text {
   text-align: center;
-  color: #001d2a;
+  color: #00547a;
 }
 
 .location-options {
@@ -18,43 +18,17 @@
     border: none;
     color: white;
     background: #0A9BD9;
-    box-shadow: 0.2rem 0.2rem 0.4rem rgba(0, 0, 0, 0.5);
+    // box-shadow: 0.2rem 0.2rem 0.4rem rgba(0, 0, 0, 0.5);
 
-  }
-}
-
-.fa-chevron-circle-left {
-  // padding-right: 1rem;
-    // width: 70px;
-          text-align: center;
-}
-
-.fa-chevron-circle-right {
-  // padding-left: 1rem;
-    // width: 70px;
-      text-align: center;
-}
-
-
-.direction {
-  width: 70px;
-        text-align: center;
-}
-
-.skip {
-  width: 70px;
-  text-align: center;
-}
-
-.forward {
-  transform: perspective(1px) translateZ(0);
-  position: relative;
-  transition-duration: 0.1s;
-  &:hover {
-    transform: translateX(4px);
   }
 }
 
 .location-input {
-
+  border: none;
+  color: #0A9BD9;
+  border-radius: 10px;
+  outline: none;
+  font-size: 2rem;
+  border: 3px solid #0A9BD9;
+  padding: 1rem;
 }

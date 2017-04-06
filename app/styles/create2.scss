@@ -26,7 +26,47 @@
       animation-delay: 0.5s;
       animation-timing-function: linear;
       animation-iteration-count: infinite;
-      background-color: #001d2a;
+      background-color: #00547a;
     }
   }
+}
+
+.fa {
+  text-align: center;
+}
+
+.fa-chevron-circle-left {
+  text-align: center;
+}
+
+.fa-chevron-circle-right {
+  text-align: center;
+}
+
+
+.direction {
+  text-align: center;
+}
+
+.skip {
+  text-align: center;
+}
+
+.backward {
+  transform: perspective(1px) translateZ(0);
+  position: relative;
+  transition-duration: 0.1s;
+  &:hover {
+    transform: translateX(-4px);
+  }
+}
+
+.forward {
+  transform: perspective(1px) translateZ(0);
+  position: relative;
+  transition-duration: 0.1s;
+
+    &:hover {
+      transform: translateX(4px);
+    }
 }
