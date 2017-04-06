@@ -1,0 +1,45 @@
+.card-container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 100vh;
+  border: 3px solid &appPrimary;
+
+}
+
+.card-sidebar {
+  display: flex;
+  flex-direction: column;
+  width: 20%;
+  height: 100vh;
+    // padding: 1.5rem;
+  border-right: 3px solid &appPrimary;
+
+  &__item {
+        padding: 1.5rem;
+    border-bottom: 3px solid &appPrimary;
+  }
+
+  &__item-text {
+    padding-bottom: 2rem;
+    margin: 0;
+  }
+}
+
+.content {
+      padding: 1.5rem;
+}
+
+.content-form {
+
+  &__item {
+    display: flex;
+    padding-bottom: 2rem;
+  }
+
+  &__title {
+    text-align: right;
+    padding: 0;
+    margin: 0;
+  }
+}

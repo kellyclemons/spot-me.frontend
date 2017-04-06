@@ -1,6 +1,6 @@
 .activities-text {
   text-align: center;
-  color: #001d2a;
+  color: #00354d;
 }
 
 .activities-options {
@@ -23,7 +23,7 @@
     flex-basis: calc(100%/3 - 2rem);
     flex-grow: 1;
     display: flex;
-    background: #0A9BD9;
+    background: $appPrimary;
     box-shadow: 0.2rem 0.2rem 0.4rem rgba(0, 0, 0, 0.5);
     transition-property: color, background-color;
     transform: perspective(1px) translateZ(0);

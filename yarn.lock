@@ -2438,6 +2438,12 @@ ember-resolver@^4.0.0:
     ember-cli-version-checker "^1.1.6"
     resolve "^1.3.2"
 
+ember-rl-dropdown@^0.10.1:
+  version "0.10.1"
+  resolved "https://registry.yarnpkg.com/ember-rl-dropdown/-/ember-rl-dropdown-0.10.1.tgz#ca072bb44181632b8ce8bdb4721e6bcccbf93ec1"
+  dependencies:
+    ember-cli-babel "^5.1.7"
+
 ember-router-generator@^1.0.0:
   version "1.2.3"
   resolved "https://registry.yarnpkg.com/ember-router-generator/-/ember-router-generator-1.2.3.tgz#8ed2ca86ff323363120fc14278191e9e8f1315ee"

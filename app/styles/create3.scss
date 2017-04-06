@@ -17,7 +17,7 @@
     display: flex;
     border: none;
     color: white;
-    background: #0A9BD9;
+    background: $appPrimary;
     // box-shadow: 0.2rem 0.2rem 0.4rem rgba(0, 0, 0, 0.5);
 
   }
@@ -25,10 +25,10 @@
 
 .location-input {
   border: none;
-  color: #0A9BD9;
+  color: $appPrimary;
   border-radius: 10px;
   outline: none;
   font-size: 2rem;
-  border: 3px solid #0A9BD9;
+  border: 3px solid $appPrimary;
   padding: 1rem;
 }
