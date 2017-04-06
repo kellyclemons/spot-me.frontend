@@ -4,6 +4,8 @@
 $white: #fff;
 $black: #000;
 $colorSecondary: #7E7E7E;
+$appPrimary: #0A9BD9 ;
+$appSecondary: #00354d ;
 
 /*measurements*/
 $gutter: 1rem;
@@ -20,6 +22,6 @@ $font-nav: 'Raleway', sans-serif;
 
 
 
-.login-card {
-  background-color: $white;
-}
+// .login-card {
+//   background-color: $colorSecondary;
+// }

@@ -3,16 +3,62 @@
   <div class="login-container">
     <div class="login-card">
       <div class="login-card__heading">
-        <p class="login-card__tab">Login</p>
-        <p class="login-card__tab">Register</p>
+        {{!-- <p class="login-card__tab login">Login</p>
+        <p class="login-card__tab register">Register</p> --}}
+        <button class="login-card__tab login">Login</button>
+        <button class="login-card__tab register">Register</button>
       </div>
       <div class="login-card__content">
         {{!-- action? --}}
-        <form action="" class="login-card__form">
-          <p class="form-control"><input type="text" placeholder="Email" class="login-card__control"></p>
-          <p class="form-control"><input type="text" placeholder="Password" class="login-card__control"></p>
-          <p class="login-card__checkbox"><input type="checkbox"> Remember Me</p>
+        <form {{action "registerUser" on="submit"}} class="login-card__form">
+          <p class="form-control">
+            {{input type="text" placeholder="Email" class="login-card__control" value=formValues.email}}
+            {{!-- {{fa-icon 'envelope'}} --}}
+          </p>
+          <p class="form-control">
+            {{input type="text" placeholder="Password" class="login-card__control" value=formValues.password}}
+          </p>
+          <p class="login-card__error">
+            {{error}}
+          </p>
+          <p class="login-card__checkbox">
+            <input type="checkbox"> Remember Me
+          </p>
           <p class="forgot-password">Forgot Password?</p>
+
+          <button type="submit" class="login-card__submit">Log In</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="login-card">
+      <div class="login-card__heading">
+        <p class="login-card__tab login">Login</p>
+        <p class="login-card__tab register">Register</p>
+      </div>
+      <div class="login-card__content">
+        {{!-- action? --}}
+        <form {{action "registerUser" on="submit"}} class="login-card__form">
+          <p class="form-control">
+            {{input type="text" placeholder="First Name" class="login-card__control" value=formValues.firstName}}
+          </p>
+          <p class="form-control">
+            {{input type="text" placeholder="Email" class="login-card__control" value=formValues.email}}
+          </p>
+          <p class="form-control">
+            {{input type="text" placeholder="Password" class="login-card__control" value=formValues.password}}
+          </p>
+
+          <p class="login-card__error">
+            {{error}}
+          </p>
+          <p class="login-card__checkbox">
+            <input type="checkbox"> I'd like to receive the latest updates and offers!
+          </p>
+          <p class="login-card__checkbox">
+            <input type="checkbox"> I have read and accept the Terms and Agreements.
+          </p>
+
           <button type="submit" class="login-card__submit">Log In</button>
         </form>
       </div>

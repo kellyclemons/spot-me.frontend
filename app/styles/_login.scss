@@ -4,20 +4,40 @@
 }
 
 .login-card {
+  color: $white;
+  margin-top: $gutter;
   // Why won't this work?
-  background-color: #e4dddd;
+  background-color: $appPrimary;
+  box-shadow: 0.2rem 0.2rem 0.4rem rgba(0, 0, 0, 0.5);
   font-family: $font-nav;
-  border: 1px solid $colorSecondary;
+  // border: 1px solid $colorSecondary #f0f0f0;
+
+  &__error {
+    color: $white;
+    text-transform: capitalize;
+  }
+
 
   &__heading {
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    border-bottom: 1px solid $colorSecondary;
-    //
-    // > * + * {
-    //
-    // }
+
+
+    > * + * {
+      box-shadow: -0.2rem 0.2rem 0.4rem rgba(0, 0, 0, 0.5);
+      // border-bottom: 1px solid $white;
+      // border-left: 1px solid $white;
+    }
+  }
+
+  &__tab {
+    width: 50%;
+    text-align: center;
+    margin: 0;
+    padding: $gutter;
+    font-size: 1.5rem;
+    color: $white;
+    background-color: $appPrimary;
+    border: 0;
   }
 
   &__content {
@@ -29,30 +49,36 @@
 
   &__form {
     width: 100%;
-
-    p {
-      margin: ($gutter) 0;
-    }
   }
+
+
 
   &__control {
     width: 100%;
     font-size: 1rem;
     font-family: $font-nav;
-
+    padding: $gutter / 2;
+    background-color: $white;
   }
 
   &__checkbox {
     float: left;
+    margin-top: 0;
   }
 
   &__submit {
+    color: $white;
+    border: 1px solid $white;
     width: 100%;
     padding: $gutter / 2;
     background: 0;
     margin-bottom: $gutter;
-    font-size: 1rem;
+    font-size: 1.5rem;
   }
+}
+
+.register {
+
 }
 
 .forgot-password {
