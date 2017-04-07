@@ -20,24 +20,23 @@
 
   &__heading {
     display: flex;
-
-
-    > * + * {
-      box-shadow: -0.2rem 0.2rem 0.4rem rgba(0, 0, 0, 0.5);
-      // border-bottom: 1px solid $white;
-      // border-left: 1px solid $white;
-    }
   }
 
   &__tab {
     width: 50%;
     text-align: center;
-    margin: 0;
     padding: $gutter;
     font-size: 1.5rem;
     color: $white;
-    background-color: $appPrimary;
+    // background-color: $appPrimary;
     border: 0;
+    text-decoration: none;
+    box-shadow: 0rem 0.2rem 0.1rem rgba(0, 0, 0, 0.5);
+
+    &.active {
+      background-color: darken($appPrimary, 10%);
+      box-shadow: none;
+    }
   }
 
   &__content {
