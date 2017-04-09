@@ -1,0 +1,31 @@
+.filter-set {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-bottom: $gutter;
+
+  &__button {
+    color: $white;
+    background-color: $c-app-lightblue;
+    border: 0;
+    font-size: 3rem;
+    border-radius: 50%;
+    line-height: 3rem;
+    padding: $gutter * 2;
+  }
+}
+
+.results {
+  background-color: #eee;
+
+  &-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    &__item {
+      margin: $gutter;
+      flex-basis: calc(100% / 4 - 2rem);
+    }
+  }
+}
