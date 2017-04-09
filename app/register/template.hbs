@@ -1,24 +1,24 @@
 <div class="section">
   <div class="login-container">
-    <div class="login-card">
-      <div class="login-card__heading">
-        {{#link-to "login" class="login-card__tab"}}Login{{/link-to}}
-        {{#link-to "register" class="login-card__tab"}}Register{{/link-to}}
+    <div class="register-card">
+      <div class="register-card__heading">
+        {{#link-to "login" class="register-card__tab"}}Login{{/link-to}}
+        {{#link-to "register" class="register-card__tab"}}Register{{/link-to}}
       </div>
-      <div class="login-card__content">
+      <div class="register-card__content">
         {{!-- action? --}}
-        <form {{action "registerUser" on="submit"}} class="login-card__form">
+        <form {{action "registerUser" on="submit"}} class="register-card__form">
           <p class="form-control">
-            {{input type="text" placeholder="First Name" class="login-card__control" value=model.firstName}}
+            {{input type="text" placeholder="First Name" class="register-card__control" value=model.firstName}}
           </p>
           <p class="form-control">
-            {{input type="text" placeholder="Email" class="login-card__control" value=model.email}}
+            {{input type="text" placeholder="Email" class="register-card__control" value=model.email}}
           </p>
           <p class="form-control">
-            {{input type="text" placeholder="Password" class="login-card__control" value=model.password}}
+            {{input type="text" placeholder="Password" class="register-card__control" value=model.password}}
           </p>
 
-          <p class="login-card__error">
+          <p class="register-card__error">
             {{error}}
           </p>
           <p class="register-card__checkbox">
@@ -28,7 +28,7 @@
             <input type="checkbox"> I have read and accept the Terms and Agreements.
           </p>
 
-          <button type="submit" class="login-card__submit">Log In</button>
+          <button type="submit" class="register-card__submit">Log In</button>
         </form>
       </div>
     </div>
