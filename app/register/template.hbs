@@ -1,0 +1,36 @@
+<div class="section">
+  <div class="login-container">
+    <div class="register-card">
+      <div class="register-card__heading">
+        {{#link-to "login" class="register-card__tab"}}Login{{/link-to}}
+        {{#link-to "register" class="register-card__tab"}}Register{{/link-to}}
+      </div>
+      <div class="register-card__content">
+        {{!-- action? --}}
+        <form {{action "registerUser" on="submit"}} class="register-card__form">
+          <p class="form-control">
+            {{input type="text" placeholder="First Name" class="register-card__control" value=model.firstName}}
+          </p>
+          <p class="form-control">
+            {{input type="text" placeholder="Email" class="register-card__control" value=model.email}}
+          </p>
+          <p class="form-control">
+            {{input type="text" placeholder="Password" class="register-card__control" value=model.password}}
+          </p>
+
+          <p class="register-card__error">
+            {{error}}
+          </p>
+          <p class="register-card__checkbox">
+            <input type="checkbox"> I'd like to receive the latest updates and offers!
+          </p>
+          <p class="register-card__checkbox">
+            <input type="checkbox"> I have read and accept the Terms and Agreements.
+          </p>
+
+          <button type="submit" class="register-card__submit">Log In</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

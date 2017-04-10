@@ -6,13 +6,16 @@ $black: #000;
 $appPrimary: #0A9BD9;
 $appSecondary: #00354d;
 $colorSecondary: #7E7E7E;
+$appPrimary: #0A9BD9 ;
+$appSecondary: #00354d ;
+$c-green: #00a42e;
 
 /*measurements*/
 $gutter: 1rem;
 
 /*fonts*/
 $fonthero: 'Permanent Marker', cursive;
-$font-nav: 'Julius Sans One', sans-serif;
+$font-nav: 'Raleway', sans-serif;
 
 @import 'box-sizing';
 @import 'css-resets';
@@ -24,12 +27,17 @@ $font-nav: 'Julius Sans One', sans-serif;
 @import 'resets';
 @import 'nav';
 @import 'footer';
+@import 'login';
+@import 'register';
 @import 'components/square';
 @import 'create';
 @import 'create2';
 @import 'create3';
 @import 'edit';
 
-fa-icon {
-  text-decoration: none;
-}
+
+
+
+// .login-card {
+//   background-color: $colorSecondary;
+// }
