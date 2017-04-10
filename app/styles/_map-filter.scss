@@ -2,30 +2,85 @@
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+  padding: $gutter * 2 $gutter;
+  background-color: #eee;
   margin-bottom: $gutter;
 
   &__button {
     color: $white;
     background-color: $c-app-lightblue;
     border: 0;
-    font-size: 3rem;
-    border-radius: 50%;
+
+    // font-size: 3rem;
+    border-radius: 2%;
     line-height: 3rem;
     padding: $gutter * 2;
+
+    &:hover {
+      filter: opacity(60%);
+    }
   }
 }
 
-.results {
-  background-color: #eee;
+.map {
+  img {
 
-  &-list {
+  }
+}
+
+.results-grid {
+  background-color: #eee;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-top: $gutter;
+
+  &__item {
+    margin: $gutter;
+    flex-basis: calc(100% / 4 - 2rem);
+  }
+}
+
+.results-card {
+  background-color: $white;
+  color: $black;
+  // text-align: center;
+  padding: $gutter / 2;
+  // border: 1px solid $c-app-darkblue;
+  // border-radius: 2%;
+  box-shadow: 0.2rem 0.2rem 0.8rem rgba(0, 0, 0, 0.5);
+
+  &__head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid #eee;
+  }
+
+  &__name {
+    text-align: center;
+    font-size: 1.5rem;
+    margin: 0;
+    color: $c-app-lightblue;
+    font-family: $font-nav;
+  }
+
+  &__sa {
+    font-size: 1rem;
+    margin: 0;
+    color: #999;
+  }
+
+  &__activities {
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
 
-    &__item {
-      margin: $gutter;
-      flex-basis: calc(100% / 4 - 2rem);
-    }
   }
+}
+
+.activity-icon {
+  width: 0.75rem;
+  margin: 0 ($gutter / 2);
+  flex-basis: calc(100% / 3 - 1rem);
 }

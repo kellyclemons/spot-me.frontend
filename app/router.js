@@ -8,6 +8,7 @@ const Router = Ember.Router.extend({
 
 Router.map(function() {
   this.route('login');
+  this.route('map-filter');
   this.route('register');
   this.route('create1');
   this.route('create2');
