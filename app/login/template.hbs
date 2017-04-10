@@ -1,2 +1,36 @@
-{{outlet}}
-<p class="stuff">stuff</p>
+
+<div class="section">
+  <div class="login-container">
+    <div class="login-card">
+      <div class="login-card__heading">
+        {{!-- <p class="login-card__tab login">Login</p>
+        <p class="login-card__tab register">Register</p> --}}
+        {{#link-to "login" class="login-card__tab"}}Login{{/link-to}}
+        {{#link-to "register" class="login-card__tab"}}Register{{/link-to}}
+      </div>
+      <div class="login-card__content">
+        {{!-- action? --}}
+        <form {{action "loginUser" on="submit"}} class="login-card__form">
+          <p class="form-control">
+            {{input type="text" placeholder="Email" class="login-card__control" value=model.email}}
+            {{!-- {{fa-icon 'envelope'}} --}}
+          </p>
+          <p class="form-control">
+            {{input type="password" placeholder="Password" class="login-card__control" value=model.password}}
+          </p>
+          <p class="login-card__error">
+            {{error}}
+          </p>
+          <p class="login-card__checkbox">
+            <input type="checkbox"> Remember Me
+          </p>
+          <p class="forgot-password">Forgot Password?</p>
+
+          <button type="submit" class="login-card__submit">Log In</button>
+        </form>
+      </div>
+    </div>
+
+
+  </div>
+</div>

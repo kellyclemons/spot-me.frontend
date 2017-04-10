@@ -1,20 +1,20 @@
 <div class="page">
-  <nav class="top-nav">
-    <div class="nav-left">
+  <nav class="navbar">
+    <div class="navbar-left">
       {{!-- Not sure about text decoration here or what's
       causing purple color. Seems that the link-to element
       has inherent styling --}}
-      {{#link-to 'index'}}
-        {{fa-icon "handshake-o"}}
-        <span class="nav-left__name">Spot Me</span>
-      {{/link-to}}
+      {{!-- {{#link-to 'index'}} --}}
+
+        <img src="./images/spot-me-icon.gif" alt="" class="navbar-logo">
+        <p class="navbar-title">Spot Me</p>
+
+      {{!-- {{/link-to}} --}}
     </div>
 
-    <div class="nav-right">
-      <ul class="nav-list">
-        <li class="nav-list__item">About Us</li>
-        <li class="nav-list__item">{{#link-to 'login'}}Login/Register{{/link-to}}</li>
-      </ul>
+    <div class="navbar-right">
+        <a class="navbar-right__item">About Us</a>
+        <a class="navbar-right__item">{{#link-to 'login'}}Login/Register{{/link-to}}</a>
     </div>
   </nav>
 
@@ -25,19 +25,16 @@
 
   <div class="footer">
     <div class="footer-left">
-      <img src="" alt="" class="footer-left__icon">
-      <span class="footer-left__name">Copyright {{fa-icon "copyright"}} Spot Me Inc.</span>
+      <img src="./images/spot-me-icon.gif" alt="" class="navbar-logo">
+      <span class="footer-left__item">Copyright {{fa-icon "copyright"}} Spot Me Inc.</span>
     </div>
     <div class="footer-right">
-      <ul class="social-list">
-        <li class="social-list__item">Terms</li>
-        <li class="social-list__item">Privacy</li>
-        <li class="social-list__item">Sitemap</li>
-        <li class="social-list__item">{{fa-icon "envelope"}}</li>
-        <li class="social-list__item">{{fa-icon "facebook"}}</li>
-        <li class="social-list__item">{{fa-icon "instagram"}}</li>
-
-      </ul>
+        <p class="footer-item">Terms</p>
+        <p class="footer-item">Privacy</p>
+        <p class="footer-item">Sitemap</p>
+        <div class="footer-item">{{fa-icon "envelope"}}</div>
+        <div class="footer-item">{{fa-icon "facebook"}}</div>
+        <div class="footer-item">{{fa-icon "instagram"}}</div>
     </div>
   </div>
 </div>

@@ -73,11 +73,12 @@
     border: 0;
     border-radius: 8px;
 
-    background: #0A9BD9;
+    background: $appPrimary;
+
     color: $c-white;
     font-family: 'Permanent Marker', cursive;
     font-size: 3rem;
-    box-shadow: 0.2rem 0.2rem 0.4rem rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 87px $appPrimary;
 
     &:hover {
       cursor: pointer;
