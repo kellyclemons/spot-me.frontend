@@ -2,19 +2,23 @@
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  padding: $gutter;
+  padding: $gutter * 2 $gutter;
   background-color: #eee;
+  margin-bottom: $gutter;
 
   &__button {
     color: $white;
     background-color: $c-app-lightblue;
     border: 0;
-    height: 2rem;
-    width: 2rem;
+
     // font-size: 3rem;
     border-radius: 2%;
     line-height: 3rem;
     padding: $gutter * 2;
+
+    &:hover {
+      filter: opacity(60%);
+    }
   }
 }
 
@@ -29,6 +33,7 @@
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  margin-top: $gutter;
 
   &__item {
     margin: $gutter;
@@ -57,7 +62,7 @@
     text-align: center;
     font-size: 1.5rem;
     margin: 0;
-    color: $black;
+    color: $c-app-lightblue;
     font-family: $fonthero;
   }
 
