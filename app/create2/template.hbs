@@ -4,7 +4,7 @@
     <div class="availability-options">
 
       {{#each availabilities as |availability|}}
-        <div class="availability-options__item">
+        <div {{action "chooseAvailability" availability}} class="availability-options__item">
           <p>{{availability}}</p>
         </div>
       {{/each}}
