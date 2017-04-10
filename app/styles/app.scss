@@ -3,6 +3,8 @@
 /*Colors*/
 $white: #fff;
 $black: #000;
+$appPrimary: #0A9BD9;
+$appSecondary: #00354d;
 $colorSecondary: #7E7E7E;
 
 /*measurements*/
@@ -23,6 +25,10 @@ $font-nav: 'Julius Sans One', sans-serif;
 @import 'nav';
 @import 'footer';
 @import 'components/square';
+@import 'create';
+@import 'create2';
+@import 'create3';
+@import 'edit';
 
 fa-icon {
   text-decoration: none;
