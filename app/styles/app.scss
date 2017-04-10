@@ -3,6 +3,8 @@
 /*Colors*/
 $white: #fff;
 $black: #000;
+$appPrimary: #0A9BD9;
+$appSecondary: #00354d;
 $colorSecondary: #7E7E7E;
 $appPrimary: #0A9BD9 ;
 $appSecondary: #00354d ;
@@ -15,11 +17,23 @@ $gutter: 1rem;
 $fonthero: 'Permanent Marker', cursive;
 $font-nav: 'Raleway', sans-serif;
 
+@import 'box-sizing';
+@import 'css-resets';
+@import 'double-container';
+@import 'top-section';
+// @import 'middle-section';
+// @import 'sidebar';
+// @import 'bottom-section';
 @import 'resets';
 @import 'nav';
 @import 'footer';
 @import 'login';
 @import 'register';
+@import 'components/square';
+@import 'create';
+@import 'create2';
+@import 'create3';
+@import 'edit';
 
 
 
