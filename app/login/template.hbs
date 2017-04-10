@@ -10,13 +10,16 @@
       </div>
       <div class="login-card__content">
         {{!-- action? --}}
-        <form {{action "loginUser" on="submit"}} class="login-card__form">
+        <form {{action 'authenticate' on='submit'}} class="login-card__form">
           <p class="form-control">
-            {{input type="text" placeholder="Email" class="login-card__control" value=model.email}}
+            {{!-- {{input type="text" placeholder="Email" class="login-card__control" value=model.email}} --}}
+            <label for="identification">Login</label>
+            {{input id='identification' placeholder='Email' value=identification class="login-card__control"}}
             {{!-- {{fa-icon 'envelope'}} --}}
           </p>
           <p class="form-control">
-            {{input type="password" placeholder="Password" class="login-card__control" value=model.password}}
+            <label for="password">Password</label>
+            {{input id='password' placeholder='Password' type='password' value=password class="login-card__control"}}
           </p>
           <p class="login-card__error">
             {{error}}
