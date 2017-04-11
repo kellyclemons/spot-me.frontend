@@ -1,6 +1,12 @@
 
 
 /*Colors*/
+// *APP COLOURS*
+$c-app-primary: #2FBCB9;
+$c-app-darkblue: #083452;
+$c-app-lightblue: #106db3;
+$c-button-light: #a3b3bf;
+$c-button-dark: #5e686f;
 $white: #fff;
 $black: #000;
 $appPrimary: #0A9BD9;
@@ -30,13 +36,11 @@ $font-nav: 'Raleway', sans-serif;
 @import 'login';
 @import 'register';
 @import 'components/square';
+@import 'map-filter';
 @import 'create';
 @import 'create2';
 @import 'create3';
 @import 'edit';
-
-
-
 
 // .login-card {
 //   background-color: $colorSecondary;
