@@ -11,6 +11,7 @@ export default Ember.Controller.extend({
       this.get('session').authenticate(authenticator, credentials)
         .catch((reason) => {
           this.set('errorMessage', reason.error);
+          debugger;
         });
 
       // console.log(this.model);
