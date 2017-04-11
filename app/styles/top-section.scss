@@ -124,20 +124,29 @@
     flex-grow: 1;
     margin: 0.5rem 0.25rem;
   }
+};
+
+.square {
+  position: relative;
+  padding-top: 100%;
+
+  &:hover {
+    filter: opacity(40%);
+  }
 
   &__image {
-    display: flex;
     position: absolute;
-    // object-fit: cover;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
-    // object-fit: fill;
-
-    filter: opacity(100%);
-
-
+    object-fit: cover;
     &:hover {
-      filter: opacity(40%);
+      filter: opacity(100%);
+    }
   }
- }
-};
+
+  &__text {
+    display: none;
+  }
+}
