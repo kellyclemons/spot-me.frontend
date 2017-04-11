@@ -21,9 +21,11 @@
             <label for="password">Password</label>
             {{input id='password' placeholder='Password' type='password' value=password class="login-card__control"}}
           </p>
-          <p class="login-card__error">
-            {{error}}
-          </p>
+          {{#if errorMessage}}
+            <p class="login-card__error">
+              <strong>Login Failed:</strong>{{errorMessage}}
+            </p>
+          {{/if}}
           <p class="login-card__checkbox">
             <input type="checkbox"> Remember Me
           </p>
