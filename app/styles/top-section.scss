@@ -55,6 +55,7 @@
     align-items: center;
     justify-content: center;
     min-width: 15rem;
+
   }
 
   &__image {
@@ -68,10 +69,13 @@
     flex-wrap: none;
 
     margin: 0;
-    padding: 2rem;
+    padding: 10rem;
+
+    height: 10rem;
+    width: 10rem;
 
     border: 0;
-    border-radius: 8px;
+    border-radius: 50%;
 
     background: $appPrimary;
 
@@ -84,6 +88,10 @@
       cursor: pointer;
     }
   }
+}
+
+.testing {
+  display: flex;
 }
 
 //  *** BOTTOM SECTION ***
