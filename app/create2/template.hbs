@@ -3,33 +3,11 @@
     <h2 class="availability-text">Select Availability:</h2>
     <div class="availability-options">
 
-      <div class="availability-options__item">
-        <p>Sunday</p>
-      </div>
-
-      <div class="availability-options__item">
-        <p>Monday</p>
-      </div>
-
-      <div class="availability-options__item">
-        <p>Tuesday</p>
-      </div>
-
-      <div class="availability-options__item">
-        <p>Wednesday</p>
-      </div>
-
-      <div class="availability-options__item">
-        <p>Thursday</p>
-      </div>
-
-      <div class="availability-options__item">
-        <p>Friday</p>
-      </div>
-
-      <div class="availability-options__item">
-        <p>Saturday</p>
-      </div>
+      {{#each availabilities as |availability|}}
+        <div {{action "chooseAvailability" availability}} class="availability-options__item">
+          <p>{{availability}}</p>
+        </div>
+      {{/each}}
 
     </div>
 
