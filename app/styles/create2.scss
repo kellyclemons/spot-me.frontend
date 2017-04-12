@@ -1,5 +1,6 @@
 .availability {
   flex: 1;
+  font-family: 'Droid Sans';
 }
 
 .availability-text {
@@ -30,7 +31,8 @@
       animation-delay: 0.5s;
       animation-timing-function: linear;
       animation-iteration-count: infinite;
-      background-color: #00547a;
+      background-color: $appSecondary;
+      cursor: pointer;
     }
   }
 }
