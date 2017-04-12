@@ -8,7 +8,11 @@ export default Ember.Controller.extend({
       var credentials = this.getProperties('identification', 'password'),
       authenticator = 'authenticator:jwt';
 
-      this.get('session').authenticate(authenticator, credentials);
+      this.get('session').authenticate(authenticator, credentials)
+        .catch((error) => {
+          this.set('errorMessage', ' Invalid Email or Password');
+          debugger;
+        });
 
       // console.log(this.model);
     }
