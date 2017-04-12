@@ -9,11 +9,10 @@ $c-button-light: #a3b3bf;
 $c-button-dark: #5e686f;
 $white: #fff;
 $black: #000;
-$appPrimary: #0A9BD9;
-$appSecondary: #00354d;
 $colorSecondary: #7E7E7E;
 $appPrimary: #0A9BD9 ;
 $appSecondary: #00354d ;
+$appThird: #ef924c;
 $c-green: #00a42e;
 
 /*measurements*/
@@ -27,9 +26,6 @@ $font-nav: 'Raleway', sans-serif;
 @import 'css-resets';
 @import 'double-container';
 @import 'top-section';
-// @import 'middle-section';
-// @import 'sidebar';
-// @import 'bottom-section';
 @import 'resets';
 @import 'nav';
 @import 'footer';
@@ -41,7 +37,3 @@ $font-nav: 'Raleway', sans-serif;
 @import 'create2';
 @import 'create3';
 @import 'edit';
-
-// .login-card {
-//   background-color: $colorSecondary;
-// }

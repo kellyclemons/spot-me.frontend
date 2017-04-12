@@ -1,5 +1,6 @@
 .location {
     flex: 1;
+    background: #ececec;
 }
 
 .location-text {
@@ -29,10 +30,11 @@
 
 .location-input {
   border: none;
-  color: $appPrimary;
+  color: $appSecondary;
+  background: #ececec;
   border-radius: 10px;
   outline: none;
   font-size: 2rem;
-  border: 3px solid $appPrimary;
+  border: 3px solid $appThird;
   padding: 1rem;
 }
