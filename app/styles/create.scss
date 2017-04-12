@@ -5,6 +5,7 @@ a {
 
 .activities {
   flex: 1;
+  background: #fcfcfc;
 }
 
 .activities-text {
@@ -32,7 +33,7 @@ a {
     flex-basis: calc(100%/3 - 2rem);
     flex-grow: 1;
     display: flex;
-    background: $appPrimary;
+    background: $appThird;
     box-shadow: 0.2rem 0.2rem 0.4rem rgba(0, 0, 0, 0.5);
     transition-property: color, background-color;
     transform: perspective(1px) translateZ(0);
@@ -43,7 +44,8 @@ a {
       animation-delay: 0.5s;
       animation-timing-function: linear;
       animation-iteration-count: infinite;
-      background-color: #001d2a;
+      background-color: $appSecondary;
+      cursor: pointer;
     }
   }
 }
@@ -53,7 +55,7 @@ a {
   display: flex;
 
     &__button {
-      background: #001d2a;
+      background: $appSecondary;
       color: white;
       padding: 1rem;
       margin: 1rem;

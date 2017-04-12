@@ -8,7 +8,7 @@
 
 .main-heading {
   align-content: space-around;
-
+  font-family: 'Permanent Marker', sans-serif;
   padding-top: 6rem;
   padding-bottom: 9rem;
   color: $c-white;
@@ -55,6 +55,7 @@
     align-items: center;
     justify-content: center;
     min-width: 15rem;
+
   }
 
   &__image {
@@ -68,22 +69,32 @@
     flex-wrap: none;
 
     margin: 0;
-    padding: 2rem;
+    padding: 8rem;
+
+    height: 10rem;
+    width: 10rem;
 
     border: 0;
-    border-radius: 8px;
+    border-radius: 50%;
 
-    background: $appPrimary;
+
+    background: rgba(#ee924c,.80);
 
     color: $c-white;
     font-family: 'Permanent Marker', cursive;
     font-size: 3rem;
-    box-shadow: 0 0 87px $appPrimary;
+    box-shadow: 0 0 87px #ef924c;
 
     &:hover {
       cursor: pointer;
     }
   }
+}
+
+.testing {
+  display: flex;
+  justify-content: center;
+  transform: translateY(-7.5rem) translateX(-5.5rem);
 }
 
 //  *** BOTTOM SECTION ***
@@ -113,20 +124,29 @@
     flex-grow: 1;
     margin: 0.5rem 0.25rem;
   }
+};
+
+.square {
+  position: relative;
+  padding-top: 100%;
+
+  &:hover {
+    filter: opacity(40%);
+  }
 
   &__image {
-    display: flex;
     position: absolute;
-    // object-fit: cover;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
-    // object-fit: fill;
-
-    filter: opacity(100%);
-
-
+    object-fit: cover;
     &:hover {
-      filter: opacity(40%);
+      filter: opacity(100%);
+    }
   }
- }
-};
+
+  &__text {
+    display: none;
+  }
+}

@@ -10,7 +10,7 @@ export default Ember.Controller.extend({
       {name: 'tennis', pic: "tennis-icon"},
       {name: 'yoga', pic: "yogapose-icon"},
       {name: 'lifting', pic: "man-lifting-icon"},
-      {name: 'basketball', pic: "basketball-player"},
+      {name: 'golf', pic: "golfer-icon"},
       {name: 'boxing', pic: "man-boxing"},
     ],
 

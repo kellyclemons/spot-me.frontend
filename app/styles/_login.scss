@@ -36,6 +36,8 @@
     &.active {
       background-color: darken($appPrimary, 10%);
       box-shadow: none;
+
+
     }
   }
 
@@ -78,7 +80,7 @@
 }
 
 .forgot-password {
-  float: right;
+  float: left;
   margin-top: 0;
 }
 
