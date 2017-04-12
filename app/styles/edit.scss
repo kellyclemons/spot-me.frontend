@@ -1,59 +1,82 @@
 .card {
   display: flex;
   justify-content: center;
+  margin: 3rem;
+  font-family: Raleway;
 }
 
 .card-container {
   display: flex;
   flex-direction: row;
   // width: 100%;
-  height: 100vh;
   border: 3px solid $appSecondary;
+  border-radius: 10px;
   width: 40rem;
   min-width: 30rem;
 }
 
 .card-sidebar {
-  background: $appPrimary;
   display: flex;
   flex-direction: column;
   min-width: 10rem;
 
-    // padding: 1.5rem;
   border-right: 3px solid $appSecondary;
 
   &__item {
     padding: 0.8rem;
     border-bottom: 3px solid $appSecondary;
-    background: $appPrimary;
-    color: white;
   }
 
   &__item-text {
     margin: 0;
+    color: $appSecondary;
+    font-weight: 800;
   }
 }
 
 .content {
-      padding: 0.8rem;
-      background: $appPrimary;
-      width: 100%;
+  width: 100%;
 }
 
 .content-form {
-
-  &__item {
-    display: block;
-    padding-bottom: 2rem;
-  }
-
-  &__title {
-    color: $c-white;
-    padding: 0 0.5rem;
-    margin: 0;
-  }
+  display: flex;
 
   &__input {
-    max-width: 15rem;
+    margin: 0.5rem;
+    // max-width: 15rem;
+    flex-grow: 1;
+
+    border: none;
+    color: $appSecondary;
+    background: #fcfcfc;
+    border-radius: 10px;
+    outline: none;
+    font-size: 1rem;
+    border: 3px solid $appThird;
+    padding: 1rem;
   }
+
+  &__submit {
+    background: $appSecondary;
+    border: none;
+    color: white;
+    padding: 1rem;
+    margin: 1rem;
+    box-shadow: 0.2rem 0.2rem 0.4rem rgba(0, 0, 0, 0.5);
+    font-size: 1rem;
+    width: 10rem;
+    align-self: center;
+    border-radius: 10px;
+
+    &:hover {
+      cursor: pointer;
+      text-decoration: underline;
+    }
+  }
+}
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
 }
