@@ -54,6 +54,39 @@
     font-size: 1rem;
     border: 3px solid $appThird;
     padding: 1rem;
+
+    -webkit-appearance:none;
+    -moz-appearance:none;
+    appearance:none;
+  }
+
+  &__option {
+    padding: 1rem;
+    position:relative
+
+    :after {
+        content:'<>';
+        font:11px "Consolas", monospace;
+        color:#aaa;
+        -webkit-transform:rotate(90deg);
+        -moz-transform:rotate(90deg);
+        -ms-transform:rotate(90deg);
+        transform:rotate(90deg);
+        right:8px; top:2px;
+        padding:0 0 2px;
+        border-bottom:1px solid #ddd;
+        position:absolute;
+        pointer-events:none;
+    }
+    :before {
+        content:'';
+        right:6px; top:0px;
+        width:20px; height:20px;
+        background:#f8f8f8;
+        position:absolute;
+        pointer-events:none;
+        display:block;
+    }
   }
 
   &__submit {
