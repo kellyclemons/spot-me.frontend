@@ -18,8 +18,8 @@
 
   &__filter {
     font-family: $font-nav;
-    color: $black;
-    font-size: 2rem;
+    color: $c-lightgrey;
+    font-size: 1rem;
 
   }
 
@@ -53,12 +53,19 @@
   }
 }
 
-.ember-cli-g-map {
-    height: 300px;
+.map-section {
+  padding: $gutter;
 }
 
+.map {
+    height: 400px;
+    width: 100%;
+    background-color: $c-lightgrey;
+}
+
+
 .results-grid {
-  background-color: #eee;
+  background-color: $c-lightgrey;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -95,6 +102,10 @@
     font-size: 1rem;
     margin: 0;
     color: #999;
+  }
+
+  &__availability {
+    font-family: $font-nav;
   }
 
   &__activities {
