@@ -1,6 +1,15 @@
+.login-section {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: url('/images/hiking.jpg') no-repeat center center;
+
+}
+
 .login-container {
   max-width: 40rem;
   margin: auto;
+  // background: blue;
 }
 
 .login-card {
