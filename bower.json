@@ -1,6 +1,6 @@
 {
   "name": "spot-me",
   "dependencies": {
-    "gmaps-for-apps": "^0.5.15"
+
   }
 }
