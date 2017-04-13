@@ -9,22 +9,15 @@
   &__button {
     color: $white;
     background-color: $c-app-lightblue;
-    border: 0;
-
-    // font-size: 3rem;
-    border-radius: 2%;
-    line-height: 3rem;
-    padding: $gutter * 2;
+    border: none;
+    border-radius: 50%;
+    height: 11rem;
+    width: 11rem;
+    filter: invert(100%);
 
     &:hover {
       filter: opacity(60%);
     }
-  }
-}
-
-.map {
-  img {
-
   }
 }
 
@@ -36,21 +29,17 @@
   margin-top: $gutter;
 
   &__item {
-    margin: $gutter;
-    flex-basis: calc(100% / 4 - 2rem);
+    margin: 0.5rem;
+    flex-basis: calc(100% / 3 - 1rem);
   }
 }
 
 .results-card {
   background-color: $white;
-  color: $black;
-  // text-align: center;
   padding: $gutter / 2;
-  // border: 1px solid $c-app-darkblue;
-  // border-radius: 2%;
   box-shadow: 0.2rem 0.2rem 0.8rem rgba(0, 0, 0, 0.5);
 
-  &__head {
+  &__info {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -66,7 +55,7 @@
     font-family: $font-nav;
   }
 
-  &__sa {
+  &__details {
     font-size: 1rem;
     margin: 0;
     color: #999;
@@ -75,12 +64,14 @@
   &__activities {
     display: flex;
     flex-direction: row;
-
   }
 }
 
 .activity-icon {
   width: 0.75rem;
-  margin: 0 ($gutter / 2);
   flex-basis: calc(100% / 3 - 1rem);
+  filter: invert(100%);
+  background: $appPrimary;
+  border-radius: 50%;
+  margin: 0.5rem;
 }
