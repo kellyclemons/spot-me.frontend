@@ -1,13 +1,22 @@
+.login-section {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: url('/images/hiking.jpg') no-repeat center center;
+
+}
+
 .login-container {
   max-width: 40rem;
   margin: auto;
+  // background: blue;
 }
 
 .login-card {
   color: $white;
   margin-top: $gutter;
   // Why won't this work?
-  background-color: $appPrimary;
+  background-color: $appThird;
   box-shadow: 0.2rem 0.2rem 0.4rem rgba(0, 0, 0, 0.5);
   font-family: $font-nav;
   // border: 1px solid $colorSecondary #f0f0f0;
@@ -28,16 +37,14 @@
     padding: $gutter;
     font-size: 1.5rem;
     color: $white;
-    // background-color: $appPrimary;
+    background-color: darken($appThird, 10%);
     border: 0;
     text-decoration: none;
-    box-shadow: 0rem 0.2rem 0.1rem rgba(0, 0, 0, 0.5);
+    // box-shadow: 0rem 0.2rem 0.1rem rgba(0, 0, 0, 0.5);
 
     &.active {
-      background-color: darken($appPrimary, 10%);
+      background-color: $appThird;
       box-shadow: none;
-
-
     }
   }
 
@@ -60,6 +67,7 @@
     font-family: $font-nav;
     padding: $gutter / 2;
     background-color: $white;
+    color: $appSecondary;
   }
 
   &__checkbox {
@@ -76,6 +84,7 @@
     margin-bottom: $gutter;
     font-size: 1.5rem;
     cursor: pointer;
+    border-radius: 10px;
   }
 }
 
