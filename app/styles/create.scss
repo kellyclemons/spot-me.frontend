@@ -46,6 +46,10 @@ a {
       background-color: $appSecondary;
       cursor: pointer;
     }
+
+    &--selected {
+      background-color: $appSecondary;
+    }
   }
 }
 
