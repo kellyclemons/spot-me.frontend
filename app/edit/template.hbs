@@ -18,19 +18,18 @@
 
           <div class="input-container">
             <form action="" class="input-container">
-              <input class="content-form__input" type="text" placeholder="Name">
-              {{!-- {{input id=""}} --}}
-              <input class="content-form__input" type="text" placeholder="Email">
-              <input class="content-form__input" type="text" placeholder="Age Range">
+              {{input id="name" class="content-form__input" type="text" placeholder="Name"}}
+              {{input id="email" class="content-form__input" type="text" placeholder="Email"}}
+              {{input id="ageRange" class="content-form__input" type="text" placeholder="Age Range"}}
               <select class="content-form__input" type="text" placeholder="Gender">
-                <option class="content-form__option" value="Male">Gender</option>
-                <option value="Male">Male</option>
-                <option value="Female">Female</option>
+                <option id="gender" class="content-form__option" value="Male">Gender</option>
+                <option id="gender" value="Male">Male</option>
+                <option id="gender" value="Female">Female</option>
               </select>
-              <input class="content-form__input" type="text" placeholder="Location">
+              {{input id="zipCode" class="content-form__input" type="text" placeholder="Location"}}
               <textarea class="content-form__input" name="name" rows="8" maxlength="500" placeholder="Bio"></textarea>
-              <input class="content-form__input" type="text" placeholder="Activities">
-              <input class="content-form__input" type="text" placeholder="Availability">
+              {{input id="activities" class="content-form__input" type="text" placeholder="Activities"}}
+              {{input id="availability" class="content-form__input" type="text" placeholder="Availability"}}
               <button class="content-form__submit">Save Changes</button>
             </form>
           </div>
