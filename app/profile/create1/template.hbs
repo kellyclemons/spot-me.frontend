@@ -5,7 +5,7 @@
 
       {{#each activities as |activity|}}
         <div {{action "chooseActivity" activity}} class="activities-options__item {{if (contains activity choices) "activities-options__item--selected"}}">
-          <img src="/images/{{activity.pic}}.png" alt="" class="activities-options__image">
+          <img src="./images/{{activity.pic}}.png" alt="" class="activities-options__image">
         </div>
       {{/each}}
 
