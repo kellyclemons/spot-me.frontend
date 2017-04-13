@@ -1,6 +1,7 @@
 .availability {
   flex: 1;
-  font-family: 'Droid Sans';
+  background: #fcfcfc;
+  font-family: 'Didact Gothic', sans-serif;
 }
 
 .availability-text {
@@ -20,7 +21,7 @@
     flex-grow: 1;
     display: flex;
     color: white;
-    background: $appPrimary;
+    background: $appThird;
     box-shadow: 0.2rem 0.2rem 0.4rem rgba(0, 0, 0, 0.5);
     transition-property: color, background-color;
     transform: perspective(1px) translateZ(0);
