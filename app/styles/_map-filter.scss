@@ -1,24 +1,60 @@
+
+.map-header {
+  text-align: center;
+  font-size: 1.25rem;
+
+  &__attention {
+    font-family: $font-nav;
+    color: $black;
+    margin-bottom: 0;
+  }
+
+  &__direction {
+    font-family:$font-nav;
+    color: $black;
+    font-size: 1.25rem;
+    margin-top: $gutter / 2;
+  }
+
+  &__filter {
+    font-family: $font-nav;
+    color: $black;
+    font-size: 2rem;
+
+  }
+
+}
+
+.workout-partners {
+  color: $c-app-primary;
+}
+
 .filter-set {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   padding: $gutter * 2 $gutter;
-  background-color: #eee;
   margin-bottom: $gutter;
 
   &__button {
     color: $white;
-    background-color: $c-app-lightblue;
+    background-color: $appThird;
     border: none;
     border-radius: 50%;
-    height: 11rem;
-    width: 11rem;
+    height: 8rem;
+    width: 8rem;
     filter: invert(100%);
 
     &:hover {
-      filter: opacity(60%);
+
+      background-color: $c-app-lightblue;
+
     }
   }
+}
+
+.ember-cli-g-map {
+    height: 300px;
 }
 
 .results-grid {

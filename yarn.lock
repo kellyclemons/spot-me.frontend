@@ -2057,6 +2057,12 @@ ember-cli-eslint@^3.0.0:
     rsvp "^3.2.1"
     walk-sync "^0.3.0"
 
+ember-cli-g-maps@^0.5.11:
+  version "0.5.11"
+  resolved "https://registry.yarnpkg.com/ember-cli-g-maps/-/ember-cli-g-maps-0.5.11.tgz#92717794c92a267e796e6c5e3dae63652f22a876"
+  dependencies:
+    ember-cli-babel "^5.1.7"
+
 ember-cli-get-component-path-option@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/ember-cli-get-component-path-option/-/ember-cli-get-component-path-option-1.0.0.tgz#0d7b595559e2f9050abed804f1d8eff1b08bc771"
