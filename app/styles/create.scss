@@ -6,6 +6,7 @@ a {
 .activities {
   flex: 1;
   background: #fcfcfc;
+  font-family: 'Fjalla One', sans-serif;
 }
 
 .activities-text {
@@ -20,8 +21,6 @@ a {
   flex-wrap: wrap;
 
   &__image {
-    // height: 10rem;
-    // width: 10rem;
     filter: invert(100%);
   }
 
@@ -54,16 +53,17 @@ a {
   justify-content: center;
   display: flex;
 
-    &__button {
-      background: $appSecondary;
-      color: white;
-      padding: 1rem;
-      margin: 1rem;
-      box-shadow: 0.2rem 0.2rem 0.4rem rgba(0, 0, 0, 0.5);
+  &__button {
+    background: $appSecondary;
+    color: white;
+    border-radius: 10px;
+    padding: 1rem;
+    margin: 1rem;
+    box-shadow: 0.2rem 0.2rem 0.4rem rgba(0, 0, 0, 0.5);
 
-      &:hover {
-        cursor: pointer;
-        text-decoration: underline;
-      }
+    &:hover {
+      cursor: pointer;
+      text-decoration: underline;
     }
+  }
 }
