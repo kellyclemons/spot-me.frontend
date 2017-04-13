@@ -10,9 +10,13 @@ Router.map(function() {
   this.route('login');
   this.route('map-filter');
   this.route('register');
-  this.route('create1');
-  this.route('create2');
-  this.route('create3');
+
+  this.route('profile', { path: '/profile/:user_id' }, function() {
+    this.route('create1');
+    this.route('create2');
+    this.route('create3');
+  });
+
   this.route('edit');
 });
 

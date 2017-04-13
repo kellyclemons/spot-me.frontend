@@ -22,7 +22,39 @@
 <div class="map-section">
   <h2 class="map-header__filter">Currently Filtering Users Who Also Enjoy: {{activities}} <span class="workout-partners">Swimming</span></h2>
     <div class="map">
-      {{!-- {{g-maps name="my-map" lat=lat lng=lng zoom=zoom}} --}}
+      {{#leaflet-map lat=lat lng=lng zoom=zoom scrollWheelZoom=false class="leaflet-map"}}
+        {{tile-layer url="http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png"}}
+
+        {{#marker-layer location=willApartment}}
+          {{#popup-layer}}
+          <div class="results-card__info">
+            <h2 class="results-card__name">Will P.</h2>
+            <p class="results-card__details">M - 24</p>
+          </div>
+          <p class="results-card__availability">Avalaible: M/Tr/F</p>
+          <div class="results-card__activities">
+            <img src="./images/man-lifting-icon.png" alt="" class="activity-icon">
+            <img src="./images/man-lifting-icon.png" alt="" class="activity-icon">
+            <img src="./images/man-lifting-icon.png" alt="" class="activity-icon">
+          </div>
+          {{/popup-layer}}
+        {{/marker-layer}}
+
+        {{#marker-layer location=kellyHouse}}
+          {{#popup-layer}}
+          <div class="results-card__info">
+            <h2 class="results-card__name">Kelly C.</h2>
+            <p class="results-card__details">F - 25</p>
+          </div>
+          <p class="results-card__availability">Avalaible: M/Tr/F</p>
+          <div class="results-card__activities">
+            <img src="./images/man-lifting-icon.png" alt="" class="activity-icon">
+            <img src="./images/man-lifting-icon.png" alt="" class="activity-icon">
+            <img src="./images/man-lifting-icon.png" alt="" class="activity-icon">
+          </div>
+          {{/popup-layer}}
+        {{/marker-layer}}
+      {{/leaflet-map}}
     </div>
 </div>
     <div class="results-container">
@@ -31,7 +63,7 @@
           <div class="results-card">
             <div class="results-card__info">
               <h2 class="results-card__name">Will P.</h2>
-              <p class="results-card__details">F - 25</p>
+              <p class="results-card__details">M - 24</p>
             </div>
             <p class="results-card__availability">Avalaible: M/Tr/F</p>
             <div class="results-card__activities">
@@ -59,7 +91,7 @@
           <div class="results-card">
             <div class="results-card__info">
               <h2 class="results-card__name">Blake H.</h2>
-              <p class="results-card__details">F - 25</p>
+              <p class="results-card__details">M - 26</p>
             </div>
             <p class="results-card__availability">Avalaible: M/Tr/F</p>
             <div class="results-card__activities">

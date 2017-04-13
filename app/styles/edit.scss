@@ -1,19 +1,44 @@
-.card {
+.card-section {
   display: flex;
-  justify-content: center;
-  margin: 3rem;
-  font-family: Raleway;
+  flex-direction: column;
+  min-height: 100vh;
+  background: url('/images/hiking.jpg') no-repeat center center;
+  font-family: 'Fjalla One', sans-serif;
 }
 
 .card-container {
+  width: 40%;
+  margin: auto;
   display: flex;
-  flex-direction: row;
-  // width: 100%;
-  border: 3px solid $appSecondary;
-  border-radius: 10px;
-  width: 40rem;
-  min-width: 30rem;
+  flex-direction: column;
+  // background: $white;
 }
+
+.card-headline {
+  border-bottom: 1px solid $appSecondary;
+  color: $white;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  margin: 1.5rem 0 1rem 0;
+  // font-family: 'Droid Sans';
+}
+
+.card {
+  // display: flex;
+  // justify-content: center;
+  // margin: 3rem;
+  // font-family: Raleway;
+}
+
+// .card-container {
+//   display: flex;
+//   flex-direction: row;
+//   // width: 100%;
+//   // border: 3px solid $appSecondary;
+//   // border-radius: 10px;
+//   width: 40rem;
+//   min-width: 30rem;
+// }
 
 .card-sidebar {
   display: flex;
@@ -48,7 +73,7 @@
 
     border: none;
     color: $appSecondary;
-    background: #fcfcfc;
+    background: #e7e6e6;
     border-radius: 10px;
     outline: none;
     font-size: 1rem;
@@ -100,6 +125,7 @@
     width: 10rem;
     align-self: center;
     border-radius: 10px;
+    font-family: 'Fjalla One', sans-serif;
 
     &:hover {
       cursor: pointer;

@@ -1,4 +1,4 @@
-<div class="section">
+<div class="login-section">
   <div class="login-container">
     <div class="login-card">
       <div class="login-card__heading">
@@ -9,7 +9,7 @@
         {{!-- action? --}}
         <form {{action "registerUser" on="submit"}} class="login-card__form">
           <p class="form-control">
-            {{input type="text" placeholder="First Name" class="login-card__control" value=model.firstName}}
+            {{input type="text" placeholder="First Name" class="login-card__control" value=model.name}}
           </p>
           <p class="form-control">
             {{input type="text" placeholder="Email" class="login-card__control" value=model.email}}

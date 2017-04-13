@@ -3,6 +3,11 @@
 
 module.exports = function(environment) {
   let ENV = {
+
+    DS: {
+      host: 'http://localhost:8080',
+    },
+
     modulePrefix: 'spot-me',
     environment,
     rootURL: '/',
@@ -50,6 +55,9 @@ module.exports = function(environment) {
   ENV['ember-simple-auth'] = {
     authorizer: 'authorizer:token'
   };
+  ENV['ember-simple-auth-token'] = {
+   serverTokenEndpoint: `${ENV.DS.host}/login`,
+ };
 
   ENV.contentSecurityPolicy = {
   'default-src': "'none'",
