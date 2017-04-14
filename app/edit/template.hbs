@@ -23,20 +23,17 @@
               </select>
             {{input value=forms.zipCode class="content-form__input" type="text" placeholder="Location"}}
             <textarea id="bio" class="content-form__input" name="name" rows="8" maxlength="500" placeholder="Bio"></textarea>
-            {{!-- {{input value=forms.activities class="content-form__input" type="text" placeholder="Activities"}} --}}
+            {{input value=forms.activities class="content-form__input" type="text" placeholder="Activities"}}
 
-            <select class="content-form__input" type="text" placeholder="Activities" onchange= {{action (mut forms.availability) value="target.value"}}>
-                <option class="content-form__option" value="Activity">Activities</option>
-                <option value="Activity">Running</option>
-                <option value="Activity">Hiking</option>
-                <option value="Activity">Cycling</option>
-                <option value="Activity">Swimming</option>
-                <option value="Activity">Tennis</option>
-                <option value="Activity">Yoga</option>
-                <option value="Activity">Weight-Lifting</option>
-                <option value="Activity">Golfing</option>
-                <option value="Activity">Boxing</option>
-              </select>
+            {{!-- <input type="checkbox">Running<br>
+            <input type="checkbox">Hiking<br>
+            <input type="checkbox">Cycling<br>
+            <input type="checkbox">Swimming<br>
+            <input type="checkbox">Tennis<br>
+            <input type="checkbox">Yoga<br>
+            <input type="checkbox">Weight-Lifting<br>
+            <input type="checkbox">Golfing<br>
+            <input type="checkbox">Boxing<br> --}}
 
             {{!-- {{input value=forms.availability class="content-form__input" type="text" placeholder="Availability"}} --}}
 
