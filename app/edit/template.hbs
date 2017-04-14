@@ -6,15 +6,50 @@
       {{#with (changeset model) as |forms|}}
         <div class="input-container">
           <form {{action "saveProfile" forms on="submit"}} action="save-profile" on="submit" class="input-container">
-            {{input value=forms.name class="content-form__input" type="text" placeholder="Name"}} {{input value=forms.email class="content-form__input" type="text" placeholder="Email"}}
-            {{input value=forms.ageRange class="content-form__input" type="text" placeholder="Age Range"}}
+            {{input value=forms.name class="content-form__input" type="text" placeholder="Name"}}
+            {{input value=forms.email class="content-form__input" type="text" placeholder="Email"}}
+            <select class="content-form__input" type="text" placeholder="Age Range" onchange= {{action (mut forms.ageRange) value="target.value"}}>
+                <option class="content-form__option" value="Male">Age Range</option>
+                <option value="Male">18-24</option>
+                <option value="Female">25-34</option>
+                <option value="Female">35-44</option>
+                <option value="Female">45-54</option>
+                <option value="Female">55-64</option>
+              </select>
             <select class="content-form__input" type="text" placeholder="Gender" onchange= {{action (mut forms.gender) value="target.value"}}>
                 <option class="content-form__option" value="Male">Gender</option>
                 <option value="Male">Male</option>
                 <option value="Female">Female</option>
-              </select> {{input value=forms.zipCode class="content-form__input" type="text" placeholder="Location"}}
-            <textarea id="bio" class="content-form__input" name="name" rows="8" maxlength="500" placeholder="Bio"></textarea> {{input value=forms.activities class="content-form__input" type="text" placeholder="Activities"}} {{input value=forms.availability
-            class="content-form__input" type="text" placeholder="Availability"}}
+              </select>
+            {{input value=forms.zipCode class="content-form__input" type="text" placeholder="Location"}}
+            <textarea id="bio" class="content-form__input" name="name" rows="8" maxlength="500" placeholder="Bio"></textarea>
+            {{!-- {{input value=forms.activities class="content-form__input" type="text" placeholder="Activities"}} --}}
+
+            <select class="content-form__input" type="text" placeholder="Activities" onchange= {{action (mut forms.availability) value="target.value"}}>
+                <option class="content-form__option" value="Activity">Activities</option>
+                <option value="Activity">Running</option>
+                <option value="Activity">Hiking</option>
+                <option value="Activity">Cycling</option>
+                <option value="Activity">Swimming</option>
+                <option value="Activity">Tennis</option>
+                <option value="Activity">Yoga</option>
+                <option value="Activity">Weight-Lifting</option>
+                <option value="Activity">Golfing</option>
+                <option value="Activity">Boxing</option>
+              </select>
+
+            {{!-- {{input value=forms.availability class="content-form__input" type="text" placeholder="Availability"}} --}}
+
+            <select class="content-form__input" type="text" placeholder="Availability" onchange= {{action (mut forms.availability) value="target.value"}}>
+                <option class="content-form__option" value="Male">Availability</option>
+                <option value="Male">Sunday</option>
+                <option value="Female">Monday</option>
+                <option value="Female">Tuesday</option>
+                <option value="Female">Wednesday</option>
+                <option value="Female">Thursday</option>
+                <option value="Female">Friday</option>
+                <option value="Female">Saturday</option>
+              </select>
             <button class="content-form__submit">Save Changes</button>
           </form>
         </div>
