@@ -1,57 +1,24 @@
-<div class="section">
+<div class="card-section">
   <div class="card-container">
-    <div class="card-sidebar">
-
-      <div class="card-sidebar__item">
-        <p class="card-sidebar__item-text">Edit Profile</p>
-      </div>
-
-      <div class="card-sidebar__item">
-        <p class="card-sidebar__item-text">Change Photo</p>
-      </div>
-
-      <div class="card-sidebar__item">
-        <p class="card-sidebar__item-text">Change Password</p>
-      </div>
-
-      <div class="card-sidebar__item">
-        <p class="card-sidebar__item-text">View My Profile</p>
-      </div>
-
-    </div>
-
     <div class="content">
+      <p class="card-headline">Edit Profile:</p>
       <div class="content-form">
-
-        <div class="content-form__item">
-          <p class="content-form__title">Name</p>
-          <input class="content-form__input" type="text" placeholder="">
+      {{#with (changeset model) as |forms|}}
+        <div class="input-container">
+          <form {{action "saveProfile" forms on="submit"}} action="save-profile" on="submit" class="input-container">
+            {{input value=forms.name class="content-form__input" type="text" placeholder="Name"}} {{input value=forms.email class="content-form__input" type="text" placeholder="Email"}}
+            {{input value=forms.ageRange class="content-form__input" type="text" placeholder="Age Range"}}
+            <select class="content-form__input" type="text" placeholder="Gender" onchange= {{action (mut forms.gender) value="target.value"}}>
+                <option class="content-form__option" value="Male">Gender</option>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+              </select> {{input value=forms.zipCode class="content-form__input" type="text" placeholder="Location"}}
+            <textarea id="bio" class="content-form__input" name="name" rows="8" maxlength="500" placeholder="Bio"></textarea> {{input value=forms.activities class="content-form__input" type="text" placeholder="Activities"}} {{input value=forms.availability
+            class="content-form__input" type="text" placeholder="Availability"}}
+            <button class="content-form__submit">Save Changes</button>
+          </form>
         </div>
-
-        <div class="content-form__item">
-          <p class="content-form__title">Email</p>
-          <input class="content-form__input" type="text" placeholder="">
-        </div>
-
-        <div class="content-form__item">
-          <p class="content-form__title">Gender</p>
-          <input class="content-form__input" type="text" placeholder="">
-        </div>
-
-        <div class="content-form__item">
-          <p class="content-form__title">Location</p>
-          <input class="content-form__input" type="text" placeholder="">
-        </div>
-
-        <div class="content-form__item">
-          <p class="content-form__title">Bio</p>
-          <textarea name="name" rows="8" cols="80"></textarea>
-        </div>
-
-        <div class="content-form__item">
-          <p class="content-form__title">Activities</p>
-          <input class="content-form__input" type="text" placeholder="">
-        </div>
+      {{/with}}
 
       </div>
     </div>
