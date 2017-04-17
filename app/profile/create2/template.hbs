@@ -4,7 +4,7 @@
     <div class="availability-options">
 
       {{#each availabilities as |availability|}}
-        <div {{action "chooseAvailability" availability}} class="availability-options__item">
+        <div {{action "chooseAvailability" availability}} class="availability-options__item {{if (contains availability choices) "activities-options__item--selected"}}">
           <p>{{availability}}</p>
         </div>
       {{/each}}
