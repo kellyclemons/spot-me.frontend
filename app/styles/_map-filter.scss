@@ -1,28 +1,84 @@
+
+.map-header {
+  text-align: center;
+  font-size: 1.25rem;
+
+  &__attention {
+    font-family: $font-nav;
+    color: $black;
+    margin-bottom: 0;
+  }
+
+  &__direction {
+    font-family:$font-nav;
+    color: $black;
+    font-size: 1.25rem;
+    margin-top: $gutter / 2;
+  }
+
+  &__filter {
+    font-family: $font-nav;
+    color: $c-lightgrey;
+    font-size: 1.5rem;
+
+  }
+
+}
+
+.workout-partners {
+  color: $c-app-primary;
+}
+
 .filter-set {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   padding: $gutter * 2 $gutter;
-  background-color: #eee;
   margin-bottom: $gutter;
 
   &__button {
     color: $white;
-    background-color: $c-app-lightblue;
+    background-color: $appThird;
     border: none;
     border-radius: 50%;
-    height: 11rem;
-    width: 11rem;
+    height: 8rem;
+    width: 8rem;
     filter: invert(100%);
 
     &:hover {
-      filter: opacity(60%);
+
+      background-color: $c-app-lightblue;
+
     }
   }
 }
 
+.map-section {
+  padding: $gutter;
+}
+
+// .map {
+//     background-color: $c-app-lightblue;
+//     height: 600px;
+//     width: 100%;
+//     display: flex;
+//     align-items: center;
+// }
+
+.leaflet-map {
+  height: 550px;
+  width: 100%;
+
+& a {
+  color: white;
+  background: none;
+  opacity: 0.1;
+}
+}
+
+
 .results-grid {
-  background-color: #eee;
+  background-color: $c-lightgrey;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -61,6 +117,10 @@
     color: #999;
   }
 
+  &__availability {
+    font-family: $font-nav;
+  }
+
   &__activities {
     display: flex;
     flex-direction: row;
@@ -74,4 +134,9 @@
   background: $appPrimary;
   border-radius: 50%;
   margin: 0.5rem;
+}
+
+.results-container {
+  max-width: 50rem;
+  // text-align: center;
 }

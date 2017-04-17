@@ -18,9 +18,9 @@
     <div class="navbar-right">
         <a class="navbar-right__item">About Us</a>
         {{#if session.isAuthenticated}}
-          <button class="navbar-right__item" {{action 'logout'}}>Log Out</button>
+          <button class="navbar-right__item nav-login" {{action 'logout'}}>Log Out</button>
         {{else}}
-        {{#link-to 'login' class="navbar-right__item"}}Login/Register{{/link-to}}
+        {{#link-to 'login' class="navbar-right__item nav-login"}}Login/Register{{/link-to}}
         {{/if}}
     </div>
   </nav>
