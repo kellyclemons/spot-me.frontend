@@ -1,7 +1,15 @@
 import Ember from 'ember';
+import data from './data';
 
 export default Ember.Route.extend({
-  // lat: 32.75494243654723,
-  // lng: -86.8359375,
-  // zoom: 4
+  async model() {
+    await this.store.pushPayload(data);
+
+    return this.store.peekAll('profile');
+
+    // TODO Delete above
+    return this.store.query('profile', {
+      filter: { zip: 'current' }
+    });
+  }
 });
