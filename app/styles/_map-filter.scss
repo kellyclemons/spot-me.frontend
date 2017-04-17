@@ -68,12 +68,14 @@
 .leaflet-map {
   height: 550px;
   width: 100%;
-
-& a {
-  color: white;
-  background: none;
-  opacity: 0.1;
 }
+
+.leaflet-control-attribution {
+  & a {
+    color: white;
+    background: none;
+    opacity: 0.1;
+  }
 }
 
 

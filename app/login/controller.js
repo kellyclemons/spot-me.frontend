@@ -15,7 +15,7 @@ export default Ember.Controller.extend({
           // debugger;
         });
 
-      this.transitionToRoute('map-filter');
+      // this.transitionToRoute('map-filter');
 
       // console.log(this.model);
     }
