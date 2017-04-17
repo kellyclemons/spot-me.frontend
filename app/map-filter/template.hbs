@@ -1,68 +1,133 @@
 {{outlet}}
 <div class="section">
   <div class="container">
-    <div class="filter-set">
-      {{!-- actions on each button? --}}
+    <div class="map-header">
+      <h1 class="map-header__attention">Find <span class="workout-partners">Workout Partners</span> Near You</h1>
+      <h2 class="map-header__direction">(Try clicking a filter below to get started!)</h2>
 
-      <button type="button" class="filter-set__button"><img src="./images/running-icon.png" alt="" class="filter-icon"></button>
-      <button type="button" class="filter-set__button"><img src="./images/cyclist-icon.png" alt="" class="filter-icon"></button>
-      <button type="button" class="filter-set__button"><img src="./images/man-lifting-icon.png" alt="" class="filter-icon"></button>
+      <div class="filter-set">
+        {{!-- actions on each button? --}}
 
+        <button type="button" class="filter-set__button"><img src="./images/running-icon.png" alt="" class="filter-icon"></button>
+        <button type="button" class="filter-set__button"><img src="./images/cyclist-icon.png" alt="" class="filter-icon"></button>
+        <button type="button" class="filter-set__button"><img src="./images/man-lifting-icon.png" alt="" class="filter-icon"></button>
 
+      </div>
 
     </div>
+
+  </div>
+
+
+  <div class="map-section">
+    <h2 class="map-header__filter">Currently Filtering Users Who Also Enjoy: {{activities}} <span class="workout-partners">Swimming</span></h2>
     <div class="map">
-      <img src="http://www.mapaplan.com/travel-map/london-top-tourist-attractions-map/high-resolution/london-top-tourist-attractions-map-09-google-maps-mashup-high-resolution.jpg" alt="dat map">
-      {{!-- <embed src="" type=""> --}}
+      {{#leaflet-map lat=lat lng=lng zoom=zoom scrollWheelZoom=false class="leaflet-map" }}
+        {{tile-layer url="http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png"}}
+
+        {{#each model as |profile|}}
+          {{#marker-layer location=(point-array profile.latitude profile.longitude)}}
+            {{#popup-layer}}
+              <div class="results-card__info">
+                <h2 class="results-card__name">{{profile.name}}</h2>
+                <p class="results-card__details">{{profile.gender}} - {{profile.ageRange}}</p>
+              </div>
+              <p class="results-card__availability">Available: M/Tr/F</p>
+              <div class="results-card__activities">
+                <img src="./images/man-lifting-icon.png" alt="" class="activity-icon">
+                <img src="./images/man-lifting-icon.png" alt="" class="activity-icon">
+                <img src="./images/man-lifting-icon.png" alt="" class="activity-icon">
+              </div>
+            {{/popup-layer}}
+          {{/marker-layer}}
+        {{/each}}
+
+        {{!-- {{#marker-layer location=willApartment}}
+          {{#popup-layer}}
+          <div class="results-card__info">
+            <h2 class="results-card__name">Will P.</h2>
+            <p class="results-card__details">M - 24</p>
+          </div>
+          <p class="results-card__availability">Avalaible: M/Tr/F</p>
+          <div class="results-card__activities">
+            <img src="./images/man-lifting-icon.png" alt="" class="activity-icon">
+            <img src="./images/man-lifting-icon.png" alt="" class="activity-icon">
+            <img src="./images/man-lifting-icon.png" alt="" class="activity-icon">
+          </div>
+          {{/popup-layer}}
+        {{/marker-layer}}
+
+        {{#marker-layer location=kellyHouse}}
+          {{#popup-layer}}
+          <div class="results-card__info">
+            <h2 class="results-card__name">Kelly C.</h2>
+            <p class="results-card__details">F - 25</p>
+          </div>
+          <p class="results-card__availability">Avalaible: M/Tr/F</p>
+          <div class="results-card__activities">
+            <img src="./images/man-lifting-icon.png" alt="" class="activity-icon">
+            <img src="./images/man-lifting-icon.png" alt="" class="activity-icon">
+            <img src="./images/man-lifting-icon.png" alt="" class="activity-icon">
+          </div>
+          {{/popup-layer}}
+        {{/marker-layer}} --}}
+      {{/leaflet-map}}
     </div>
-
-      <div class="results-grid">
-        <div class="results-grid__item">
-          <div class="results-card">
-            <div class="results-card__info">
-              <h2 class="results-card__name">Will P.</h2>
-            </div>
-            <div class="results-card__activities">
-              <img src="./images/man-lifting-icon.png" alt="" class="activity-icon">
-              <img src="./images/man-lifting-icon.png" alt="" class="activity-icon">
-              <img src="./images/man-lifting-icon.png" alt="" class="activity-icon">
-            </div>
+  </div>
+  <div class="results-container">
+    <div class="results-grid">
+      <div class="results-grid__item">
+        <div class="results-card">
+          <div class="results-card__info">
+            <h2 class="results-card__name">Will P.</h2>
+            <p class="results-card__details">M - 24</p>
+          </div>
+          <p class="results-card__availability">Avalaible: M/Tr/F</p>
+          <div class="results-card__activities">
+            <img src="./images/man-lifting-icon.png" alt="" class="activity-icon">
+            <img src="./images/man-lifting-icon.png" alt="" class="activity-icon">
+            <img src="./images/man-lifting-icon.png" alt="" class="activity-icon">
           </div>
         </div>
-        <div class="results-grid__item">
-          <div class="results-card">
-            <div class="results-card__info">
-              <h2 class="results-card__name">Kelly C.</h2>
-            </div>
-            <div class="results-card__activities">
-              <img src="./images/man-lifting-icon.png" alt="" class="activity-icon">
-              <img src="./images/man-lifting-icon.png" alt="" class="activity-icon">
-              <img src="./images/man-lifting-icon.png" alt="" class="activity-icon">
-            </div>
+      </div>
+      <div class="results-grid__item">
+        <div class="results-card">
+          <div class="results-card__info">
+            <h2 class="results-card__name">Kelly C.</h2>
+            <p class="results-card__details">F - 25</p>
+          </div>
+          <p class="results-card__availability">Avalaible: M/Tr/F</p>
+          <div class="results-card__activities">
+            <img src="./images/man-lifting-icon.png" alt="" class="activity-icon">
+            <img src="./images/man-lifting-icon.png" alt="" class="activity-icon">
+            <img src="./images/man-lifting-icon.png" alt="" class="activity-icon">
           </div>
         </div>
-        <div class="results-grid__item">
-          <div class="results-card">
-            <div class="results-card__info">
-              <h2 class="results-card__name">Blake H.</h2>
-            </div>
-            <div class="results-card__activities">
-              <img src="./images/man-lifting-icon.png" alt="" class="activity-icon">
-              <img src="./images/man-lifting-icon.png" alt="" class="activity-icon">
-              <img src="./images/man-lifting-icon.png" alt="" class="activity-icon">
-            </div>
+      </div>
+      <div class="results-grid__item">
+        <div class="results-card">
+          <div class="results-card__info">
+            <h2 class="results-card__name">Blake H.</h2>
+            <p class="results-card__details">M - 26</p>
+          </div>
+          <p class="results-card__availability">Avalaible: M/Tr/F</p>
+          <div class="results-card__activities">
+            <img src="./images/man-lifting-icon.png" alt="" class="activity-icon">
+            <img src="./images/man-lifting-icon.png" alt="" class="activity-icon">
+            <img src="./images/man-lifting-icon.png" alt="" class="activity-icon">
           </div>
         </div>
+      </div>
 
 
 
-        {{!-- <li class="results-list__item">Profile</li>
+      {{!-- <li class="results-list__item">Profile</li>
         <li class="results-list__item">Profile</li>
         <li class="results-list__item">Profile</li>
         <li class="results-list__item">Profile</li> --}}
 
-      </div>
-
+    </div>
 
   </div>
+
 </div>
