@@ -12,8 +12,10 @@ export default Ember.Controller.extend({
       this.get('session').authenticate(authenticator, credentials)
         .catch((error) => {
           this.set('errorMessage', ' Invalid Email or Password');
-          debugger;
+          // debugger;
         });
+
+      this.transitionToRoute('map-filter');
 
       // console.log(this.model);
     }

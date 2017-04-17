@@ -20,6 +20,7 @@ export default Ember.Controller.extend({
         this.set('errorMessage', ' Invalid Email or Password');
       }
 
+      // ember knows to look for the id in the user object below
       this.transitionToRoute('profile.create1', user);
     }
   }

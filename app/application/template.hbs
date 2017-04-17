@@ -16,7 +16,7 @@
     </div>
 
     <div class="navbar-right">
-        <a class="navbar-right__item">About Us</a>
+        {{#link-to 'map-filter' class="navbar-right__item orange"}}Map{{/link-to}}
         {{#if session.isAuthenticated}}
           <button class="navbar-right__item nav-login" {{action 'logout'}}>Log Out</button>
         {{else}}
