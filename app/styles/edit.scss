@@ -59,8 +59,23 @@
   }
 }
 
+.profile-pic {
+  border-radius: 100%;
+  width: 15rem;
+
+  &:hover {
+    filter: grayscale(100%);
+  }
+}
+
 .content {
   width: 100%;
+  min-width: 25rem;
+  background: $appThird;
+  // border-radius: 10px;
+  box-shadow: 0.2rem 0.2rem 0.4rem rgba(0, 0, 0, 0.5);
+  margin: 1rem;
+  padding: 1rem;
 }
 
 .content-form {
@@ -73,11 +88,12 @@
 
     border: none;
     color: $appSecondary;
+
     background: #e7e6e6;
     border-radius: 10px;
     outline: none;
     font-size: 1rem;
-    border: 3px solid $appThird;
+    border: 3px solid $appSecondary;
     padding: 1rem;
 
     -webkit-appearance:none;
@@ -126,6 +142,7 @@
     align-self: center;
     border-radius: 10px;
     font-family: 'Fjalla One', sans-serif;
+    text-align: center;
 
     &:hover {
       cursor: pointer;
