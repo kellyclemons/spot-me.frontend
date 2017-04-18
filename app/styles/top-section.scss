@@ -156,6 +156,14 @@
   }
 
   &__text {
-    display: none;
+    position: absolute;
+    visibility: hidden;
+    font-size: 0.8rem;
   }
+}
+
+
+.square:hover .square__text {
+  visibility: visible;
+  opacity: 1;
 }
