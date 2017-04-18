@@ -21,6 +21,12 @@ export default Ember.Controller.extend({
         } else {
           this.set('choices', [...this.choices, availability])
         }
+      },
+
+      saveAndContinue() {
+        this.model.set('availabilities', this.choices.map(({name}) => name));
+
+        this.model.save();
       }
     }
 });

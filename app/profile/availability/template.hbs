@@ -1,6 +1,6 @@
 <div class="section">
   <div class="availability">
-    <h2 class="availability-text">Select Availability:</h2>
+    <h2 class="availability-text">{{model.name}}, Please Select Availability:</h2>
     <div class="availability-options">
 
       {{#each availabilities as |availability|}}
@@ -14,7 +14,7 @@
     <div class="move-on">
       <div class="move-on__button direction">{{#link-to 'profile.create1'}}<i class="fa fa-chevron-circle-left backward" aria-hidden="true"></i>{{/link-to}}</div>
       <div class="move-on__button skip">{{#link-to 'profile.create3'}}Skip{{/link-to}}</div>
-      <div class="move-on__button direction">{{#link-to 'profile.create3'}}<i class="fa fa-chevron-circle-right forward" aria-hidden="true"></i>{{/link-to}}</div>
+      <button class="move-on__button direction" {{action "saveAndContinue"}}><i class="fa fa-chevron-circle-right forward" aria-hidden="true"></i></button>
     </div>
 
   </div>
