@@ -1,7 +1,10 @@
 <div class="card-section">
   <div class="card-container">
     <div class="content">
-      <p class="card-headline">Edit Profile:</p>
+      <div class="card-headline">
+        {{#link-to "edit" class="edit-card__tab"}}Edit Profile{{/link-to}}
+        {{#link-to "messages" class="edit-card__tab"}}My Messages{{/link-to}}
+      </div>
       <div class="content-form">
       {{#with (changeset model) as |forms|}}
         <div class="input-container">
@@ -10,12 +13,12 @@
             {{input value=forms.name class="content-form__input" type="text" placeholder="Name"}}
             {{input value=forms.email class="content-form__input" type="text" placeholder="Email"}}
             <select class="content-form__input" type="text" placeholder="Age Range" onchange= {{action (mut forms.ageRange) value="target.value"}}>
-                <option class="content-form__option" value="Male">Age Range</option>
-                <option value="Male">18-24</option>
-                <option value="Female">25-34</option>
-                <option value="Female">35-44</option>
-                <option value="Female">45-54</option>
-                <option value="Female">55-64</option>
+                <option class="content-form__option" value="ageRange">Age Range</option>
+                <option value="ageRange">18-24</option>
+                <option value="ageRactivity">25-34</option>
+                <option value="ageRactivity">35-44</option>
+                <option value="ageRactivity">45-54</option>
+                <option value="ageRactivity">55-64</option>
               </select>
             <select class="content-form__input" type="text" placeholder="Gender" onchange= {{action (mut forms.gender) value="target.value"}}>
                 <option class="content-form__option" value="Male">Gender</option>
@@ -27,39 +30,27 @@
             {{!-- {{input value=forms.activities class="content-form__input" type="text" placeholder="Activities"}} --}}
 
             <select multiple class="content-form__input" type="text" placeholder="Activities" onchange= {{action (mut forms.activities) value="target.value"}}>
-                <option class="content-form__option" value="Male">Activities</option>
-                <option value="Male">Running</option>
-                <option value="Female">Hiking</option>
-                <option value="Female">Cycling</option>
-                <option value="Female">Swimming</option>
-                <option value="Female">Tennis</option>
-                <option value="Female">Yoga</option>
-                <option value="Female">Lifting</option>
-                <option value="Female">Golfing</option>
-                <option value="Female">Boxing</option>
+                <option class="content-form__option" value="acavailability">Activities</option>
+                <option value="activity">Running</option>
+                <option value="activity">Hiking</option>
+                <option value="activity">Cycling</option>
+                <option value="activity">Swimming</option>
+                <option value="activity">Tennis</option>
+                <option value="activity">Yoga</option>
+                <option value="activity">Lifting</option>
+                <option value="activity">Golfing</option>
+                <option value="activity">Boxing</option>
               </select>
 
-            {{!-- <input type="checkbox">Running<br>
-            <input type="checkbox">Hiking<br>
-            <input type="checkbox">Cycling<br>
-            <input type="checkbox">Swimming<br>
-            <input type="checkbox">Tennis<br>
-            <input type="checkbox">Yoga<br>
-            <input type="checkbox">Weight-Lifting<br>
-            <input type="checkbox">Golfing<br>
-            <input type="checkbox">Boxing<br> --}}
-
-            {{!-- {{input value=forms.availability class="content-form__input" type="text" placeholder="Availability"}} --}}
-
             <select multiple class="content-form__input multiple__input" type="text" placeholder="Availability" onchange= {{action (mut forms.availability) value="target.value"}}>
-                <option class="content-form__option" value="Male">Availability</option>
-                <option value="Male">Sunday</option>
-                <option value="Female">Monday</option>
-                <option value="Female">Tuesday</option>
-                <option value="Female">Wednesday</option>
-                <option value="Female">Thursday</option>
-                <option value="Female">Friday</option>
-                <option value="Female">Saturday</option>
+                <option class="content-form__option" value="availability">Availability</option>
+                <option value="availability">Sunday</option>
+                <option value="availability">Monday</option>
+                <option value="availability">Tuesday</option>
+                <option value="availability">Wednesday</option>
+                <option value="availability">Thursday</option>
+                <option value="availability">Friday</option>
+                <option value="availability">Saturday</option>
               </select>
             {{#link-to 'map-filter' class="content-form__submit"}}Save Changes{{/link-to}}
           </form>

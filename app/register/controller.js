@@ -20,7 +20,7 @@ export default Ember.Controller.extend({
         this.set('errorMessage', ' Invalid Email or Password');
       }
 
-      this.transitionToRoute('profile.create1', user);
+      this.transitionToRoute('profile.activities');
     }
   }
 });

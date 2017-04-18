@@ -23,6 +23,12 @@ export default Ember.Controller.extend({
         } else {
           this.set('choices', [...this.choices, activity])
         }
+      },
+
+      saveAndContinue() {
+        this.model.set('activities', this.choices.map(({name}) => name));
+
+        this.model.save();
       }
     }
 });
