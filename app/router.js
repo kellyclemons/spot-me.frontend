@@ -11,10 +11,10 @@ Router.map(function() {
   this.route('map-filter');
   this.route('register');
 
-  this.route('profile', { path: '/profile/:user_id' }, function() {
-    this.route('create1');
-    this.route('create2');
-    this.route('create3');
+  this.route('profile', { path: '/my-profile' }, function() {
+    this.route('activities');
+    this.route('availability');
+    this.route('zip-code');
   });
 
   this.route('edit');
