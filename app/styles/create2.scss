@@ -1,7 +1,7 @@
 .availability {
   flex: 1;
   background: #fcfcfc;
-  font-family: 'Didact Gothic', sans-serif;
+  font-family: 'Fjalla One', sans-serif;
 }
 
 .availability-text {
@@ -77,4 +77,8 @@
     &:hover {
       transform: translateX(4px);
     }
+}
+
+.availability-options__item--selected {
+  background-color: $appSecondary;
 }
