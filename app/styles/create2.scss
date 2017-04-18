@@ -78,3 +78,7 @@
       transform: translateX(4px);
     }
 }
+
+.availability-options__item--selected {
+  background-color: $appSecondary;
+}
