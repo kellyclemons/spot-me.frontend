@@ -8,19 +8,36 @@
 
 .card-container {
   width: 40%;
-  margin: auto;
   display: flex;
   flex-direction: column;
+  margin: 1rem;
+  align-self: center;
   // background: $white;
 }
 
 .card-headline {
-  border-bottom: 1px solid $appSecondary;
   color: $white;
   text-transform: uppercase;
-  font-size: 1.5rem;
-  margin: 1.5rem 0 1rem 0;
+
+  display: flex;
+  background: green;
+  justify-content: space-between;
+
   // font-family: 'Droid Sans';
+}
+
+.edit-card__tab  {
+  width: 50%;
+  text-align: center;
+  padding: 1rem;
+  font-size: 1.5rem;
+  color: $white;
+  background-color: #eb751d;
+
+  &.active {
+    background-color: $appThird;
+    box-shadow: none;
+  }
 }
 
 .card {
@@ -40,24 +57,24 @@
 //   min-width: 30rem;
 // }
 
-.card-sidebar {
-  display: flex;
-  flex-direction: column;
-  min-width: 10rem;
-
-  border-right: 3px solid $appSecondary;
-
-  &__item {
-    padding: 0.8rem;
-    border-bottom: 3px solid $appSecondary;
-  }
-
-  &__item-text {
-    margin: 0;
-    color: $appSecondary;
-    font-weight: 800;
-  }
-}
+// .card-sidebar {
+//   display: flex;
+//   flex-direction: column;
+//   min-width: 10rem;
+//
+//   border-right: 3px solid $appSecondary;
+//
+//   &__item {
+//     padding: 0.8rem;
+//     border-bottom: 3px solid $appSecondary;
+//   }
+//
+//   &__item-text {
+//     margin: 0;
+//     color: $appSecondary;
+//     font-weight: 800;
+//   }
+// }
 
 .profile-pic {
   border-radius: 100%;
@@ -74,11 +91,12 @@
   background: $appThird;
   // border-radius: 10px;
   box-shadow: 0.2rem 0.2rem 0.4rem rgba(0, 0, 0, 0.5);
-  margin: 1rem;
-  padding: 1rem;
+  // margin: 1rem;
+  // padding: 1rem;
 }
 
 .content-form {
+  padding: 1rem;
   display: flex;
 
   &__input {

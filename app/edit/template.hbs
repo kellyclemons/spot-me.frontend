@@ -1,7 +1,10 @@
 <div class="card-section">
   <div class="card-container">
     <div class="content">
-      <p class="card-headline">Edit Profile:</p>
+      <div class="card-headline">
+        {{#link-to "edit" class="edit-card__tab"}}Edit Profile{{/link-to}}
+        {{#link-to "messages" class="edit-card__tab"}}My Messages{{/link-to}}
+      </div>
       <div class="content-form">
       {{#with (changeset model) as |forms|}}
         <div class="input-container">

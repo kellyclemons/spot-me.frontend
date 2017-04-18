@@ -18,6 +18,7 @@ Router.map(function() {
   });
 
   this.route('edit');
+  this.route('messages');
 });
 
 export default Router;
