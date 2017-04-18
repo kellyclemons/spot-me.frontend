@@ -1,15 +1,16 @@
 import Ember from 'ember';
 import data from './data';
 
+let zip = this.get('zip');
+
 export default Ember.Route.extend({
+
   async model() {
-    await this.store.pushPayload(data);
-
-    return this.store.peekAll('profile');
-
     // TODO Delete above
-    return this.store.query('profile', {
-      filter: { zip: 'current' }
+    return this.store.query('user', {
+      filter: {
+        zip: zip
+      }
     });
   }
 });
