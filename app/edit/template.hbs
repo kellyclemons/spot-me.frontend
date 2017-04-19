@@ -30,21 +30,32 @@
             <textarea id="bio" class="content-form__input" name="name" rows="8" maxlength="500" placeholder="Bio"></textarea>
             {{!-- {{input value=forms.activities class="content-form__input" type="text" placeholder="Activities"}} --}}
 
-            <ul>
+
+          <div class="wizard">
+            <div class="headline">
+            <p class="wizard-headline">My Activities</p>
+            <p class="wizard-headline edit-headline">{{#link-to "profile.activities"}}(<span class="underline-only">edit</span>){{/link-to}}</p>
+            </div>
+            <ul class="wizard-list">
               {{#each model.activities as |activity|}}
-                <li>{{activity}}</li>
+                <li class="wizard-list__item">{{activity}}</li>
               {{/each}}
             </ul>
+          </div>
 
-            {{#link-to "profile.activities"}}Edit Activities{{/link-to}}
-
-            <ul>
+          <div class="wizard">
+            <div class="headline">
+            <p class="wizard-headline">My Availability</p>
+            <p class="wizard-headline edit-headline">{{#link-to "profile.availability"}}(<span class="underline-only">edit</span>){{/link-to}}</p>
+            </div>
+            <ul class="wizard-list">
               {{#each model.availabilities as |availability|}}
-                <li>{{availability}}</li>
+                <li class="wizard-list__item">{{availability}}</li>
               {{/each}}
             </ul>
 
-            {{#link-to "profile.availability"}}Edit Availability{{/link-to}}
+
+            </div>
 
             {{#link-to 'map-filter' class="content-form__submit"}}Save Changes{{/link-to}}
           </form>
