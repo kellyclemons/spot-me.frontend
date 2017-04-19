@@ -1,10 +1,9 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
-  model() {
-    // @TODO: Replace with findRecord instead of create
-    return this.store.createRecord('user');
+  currentUser: Ember.inject.service(),
 
-    return this.store.findRecord('user', 'current');
+  model() {
+    return this.get('currentUser').load();
   }
 });
