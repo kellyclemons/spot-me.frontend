@@ -13,14 +13,6 @@
             {{input value=forms.name class="content-form__input" type="text" placeholder="Name"}}
             {{input value=forms.email class="content-form__input" type="text" placeholder="Email"}}
 
-            <ul>
-              {{#each model.activities as |activity|}}
-                <li>{{activity}}</li>
-              {{/each}}
-            </ul>
-
-            {{#link-to "profile.activities"}}Edit activities{{/link-to}}
-
             <select class="content-form__input" type="text" placeholder="Age Range" onchange= {{action (mut forms.ageRange) value="target.value"}}>
                 <option class="content-form__option" value="ageRange">Age Range</option>
                 <option value="ageRange">18-24</option>
@@ -38,29 +30,22 @@
             <textarea id="bio" class="content-form__input" name="name" rows="8" maxlength="500" placeholder="Bio"></textarea>
             {{!-- {{input value=forms.activities class="content-form__input" type="text" placeholder="Activities"}} --}}
 
-            <select multiple class="content-form__input" type="text" placeholder="Activities" onchange= {{action (mut forms.activities) value="target.value"}}>
-                <option class="content-form__option" value="acavailability">Activities</option>
-                <option value="Running">Running</option>
-                <option value="Hiking">Hiking</option>
-                <option value="Cycling">Cycling</option>
-                <option value="Swimming">Swimming</option>
-                <option value="Tennis">Tennis</option>
-                <option value="Yoga">Yoga</option>
-                <option value="Lifting">Lifting</option>
-                <option value="Golfing">Golfing</option>
-                <option value="Boxing">Boxing</option>
-              </select>
+            <ul>
+              {{#each model.activities as |activity|}}
+                <li>{{activity}}</li>
+              {{/each}}
+            </ul>
 
-            <select multiple class="content-form__input multiple__input" type="text" placeholder="Availability" onchange= {{action (mut forms.availability) value="target.value"}}>
-                <option class="content-form__option" value="availability">Availability</option>
-                <option value="Sunday">Sunday</option>
-                <option value="Monday">Monday</option>
-                <option value="Tuesday">Tuesday</option>
-                <option value="Wednesday">Wednesday</option>
-                <option value="Thursday">Thursday</option>
-                <option value="Friday">Friday</option>
-                <option value="Saturday">Saturday</option>
-              </select>
+            {{#link-to "profile.activities"}}Edit Activities{{/link-to}}
+
+            <ul>
+              {{#each model.availabilities as |availability|}}
+                <li>{{availability}}</li>
+              {{/each}}
+            </ul>
+
+            {{#link-to "profile.availability"}}Edit Availability{{/link-to}}
+
             {{#link-to 'map-filter' class="content-form__submit"}}Save Changes{{/link-to}}
           </form>
         </div>
