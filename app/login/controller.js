@@ -10,10 +10,15 @@ export default Ember.Controller.extend({
       authenticator = 'authenticator:jwt';
 
       this.get('session').authenticate(authenticator, credentials)
+      .then(() => {
+        this.transitionToRoute('map-filter');
+      })
         .catch((error) => {
           this.set('errorMessage', ' Invalid Email or Password');
-          debugger;
+          // debugger;
         });
+
+
 
       // console.log(this.model);
     }
