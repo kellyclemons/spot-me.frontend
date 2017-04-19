@@ -10,7 +10,7 @@ export default DS.Model.extend({
   gender: DS.attr('string'),
   latitude: DS.attr('string'),
   bio: DS.attr(),
-  availability: DS.attr([]),
+  availabilities: DS.attr([]),
   zipLatitude: DS.attr(),
   ageRange: DS.attr(),
   zipLongitude: DS.attr(),
