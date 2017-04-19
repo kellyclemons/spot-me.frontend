@@ -2,14 +2,22 @@ import Ember from 'ember';
 
 
 export default Ember.Route.extend({
-  zip: 37211,
+  currentUser: Ember.inject.service(),
 
   async model() {
-    let zip = this.get('zip');
+    let zipCode = this.get('currentUser.user.zipCode');
+
+    if (!zipCode) {
+      const user = await this.get('currentUser').load();
+      zipCode = user.get('zipCode');
+    }
+
+    // if (this.get)
+    // let zip = this.get('zip');
     // TODO Delete above
     return this.store.query('user', {
       filter: {
-        zip: zip
+        zip: zipCode
       }
     });
   }
