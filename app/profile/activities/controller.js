@@ -9,7 +9,7 @@ export default Ember.Controller.extend({
       {name: 'Swimming', pic: "swimming-figure"},
       {name: 'Tennis', pic: "tennis-icon"},
       {name: 'Yoga', pic: "yogapose-icon"},
-      {name: 'lifting', pic: "man-lifting-icon"},
+      {name: 'Lifting', pic: "man-lifting-icon"},
       {name: 'Golf', pic: "golfer-icon"},
       {name: 'Boxing', pic: "man-boxing"},
     ],
@@ -28,7 +28,9 @@ export default Ember.Controller.extend({
       saveAndContinue() {
         this.model.set('activities', this.choices.map(({name}) => name));
 
-        this.model.save();
+        this.model.save().then(() => {
+          this.transitionToRoute('profile.availability');
+        });
       }
     }
 });
