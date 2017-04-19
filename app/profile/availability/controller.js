@@ -26,7 +26,9 @@ export default Ember.Controller.extend({
       saveAndContinue() {
         this.model.set('availabilities', this.choices.map(({name}) => name));
 
-        this.model.save();
+        this.model.save().then(() => {
+          this.transitionToRoute('profile.zipcode');
+        });
       }
     }
 });

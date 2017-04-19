@@ -15,7 +15,7 @@ Router.map(function() {
   this.route('profile', { path: '/my-profile' }, function() {
     this.route('activities');
     this.route('availability');
-    this.route('zip-code');
+    this.route('zipcode');
   });
 
   this.route('edit');
