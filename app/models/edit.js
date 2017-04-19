@@ -8,5 +8,5 @@ export default DS.Model.extend({
   zipCode: DS.attr('string'),
   bio: DS.attr('string'),
   activities: DS.attr('string'),
-  availability: DS.attr('string'),
+  availabilities: DS.attr('string'),
 })
