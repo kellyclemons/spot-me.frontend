@@ -1,13 +1,15 @@
 import Ember from 'ember';
 
 export default Ember.Controller.extend({
+  session: Ember.inject.service(),
+
   actions: {
     async registerUser() {
       const user = this.store.createRecord('user', this.model);
       const {email, password} = this.model;
 
       try {
-        await user.save()
+        await user.save();
       } catch (e) {
         this.set('error', 'That email address is already taken. Please try again!');
       }

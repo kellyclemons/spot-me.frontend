@@ -3,15 +3,15 @@ import Ember from 'ember';
 export default Ember.Controller.extend({
   activities:
     [
-      {name: 'running', pic: "running-icon"},
-      {name: 'hiking', pic: "hiking-icon"},
-      {name: 'cycling', pic: "cyclist-icon"},
-      {name: 'swimming', pic: "swimming-figure"},
-      {name: 'tennis', pic: "tennis-icon"},
-      {name: 'yoga', pic: "yogapose-icon"},
-      {name: 'lifting', pic: "man-lifting-icon"},
-      {name: 'golf', pic: "golfer-icon"},
-      {name: 'boxing', pic: "man-boxing"},
+      {name: 'Running', pic: "running-icon"},
+      {name: 'Hiking', pic: "hiking-icon"},
+      {name: 'Cycling', pic: "cyclist-icon"},
+      {name: 'Swimming', pic: "swimming-figure"},
+      {name: 'Tennis', pic: "tennis-icon"},
+      {name: 'Yoga', pic: "yogapose-icon"},
+      {name: 'Lifting', pic: "man-lifting-icon"},
+      {name: 'Golf', pic: "golfer-icon"},
+      {name: 'Boxing', pic: "man-boxing"},
     ],
 
     choices: [],
@@ -28,7 +28,9 @@ export default Ember.Controller.extend({
       saveAndContinue() {
         this.model.set('activities', this.choices.map(({name}) => name));
 
-        this.model.save();
+        this.model.save().then(() => {
+          this.transitionToRoute('profile.availability');
+        });
       }
     }
 });
