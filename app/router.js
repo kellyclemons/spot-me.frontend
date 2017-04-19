@@ -8,8 +8,9 @@ const Router = Ember.Router.extend({
 
 Router.map(function() {
   this.route('login');
-  this.route('map-filter');
+
   this.route('register');
+  this.route('map-filter');
 
   this.route('profile', { path: '/my-profile' }, function() {
     this.route('activities');
