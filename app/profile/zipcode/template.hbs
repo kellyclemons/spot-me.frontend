@@ -1,20 +1,22 @@
 <div class="section">
-  <div class="location">
+  {{#with (changeset model) as |formValues|}}
+    <form class="location" {{action "save" formValues on="submit"}}>
 
-    <h2 class="location-text">{{model.name}}, Please Enter Your Zipcode:</h2>
-    
-    <div class="location-options">
+      <h2 class="location-text">{{model.name}}, Please Enter Your Zipcode:</h2>
 
-      <div class="location-options__item">
-        <input class="location-input" type="text" maxlength="5">
+      <div class="location-options">
+
+        <div class="location-options__item">
+          {{input class="location-input" type="text" maxlength="5" value=formValues.zipCode}}
+        </div>
+
       </div>
 
-    </div>
+      <div class="move-on">
+        {{!-- {{#link-to 'profile.availability' class="move-on__button direction"}}<i class="fa fa-chevron-circle-left backward" aria-hidden="true"></i>{{/link-to}} --}}
+        <button class="move-on__button">Save</button>
+      </div>
 
-    <div class="move-on">
-      <div class="move-on__button direction">{{#link-to 'profile.availability'}}<i class="fa fa-chevron-circle-left backward" aria-hidden="true"></i>{{/link-to}}</div>
-      <div class="move-on__button">{{#link-to 'edit'}}Finish{{/link-to}}</div>
-    </div>
-
-  </div>
+    </form>
+  {{/with}}
 </div>
