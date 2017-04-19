@@ -12,6 +12,15 @@
           <form {{action "saveProfile" forms on="submit"}} action="save-profile" on="submit" class="input-container">
             {{input value=forms.name class="content-form__input" type="text" placeholder="Name"}}
             {{input value=forms.email class="content-form__input" type="text" placeholder="Email"}}
+
+            <ul>
+              {{#each model.activities as |activity|}}
+                <li>{{activity}}</li>
+              {{/each}}
+            </ul>
+
+            {{#link-to "profile.activities"}}Edit activities{{/link-to}}
+
             <select class="content-form__input" type="text" placeholder="Age Range" onchange= {{action (mut forms.ageRange) value="target.value"}}>
                 <option class="content-form__option" value="ageRange">Age Range</option>
                 <option value="ageRange">18-24</option>
