@@ -3,6 +3,10 @@
   <div class="container">
     <div class="map-header">
       <h1 class="map-header__attention">Find <span class="workout-partners">Workout Partners</span> Near You</h1>
+      <button type="button" {{action 'getUserLocation'}}>Find My Location!</button>
+      {{#if userLocation}}
+        {{userLocation}}
+      {{/if}}
       <h2 class="map-header__direction">(Try clicking a filter below to get started!)</h2>
 
       <div class="filter-set">
@@ -28,6 +32,7 @@
 
           {{#each model as |profile|}}
             {{#marker-layer location=(point-array profile.latitude profile.longitude)}}
+            {{!-- {{#marker-layer location=currentLocation}} --}}
               {{#popup-layer}}
                 <div class="results-card__info">
                   <h2 class="results-card__name">{{profile.name}}</h2>

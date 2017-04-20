@@ -2,7 +2,20 @@ import Ember from 'ember';
 
 
 export default Ember.Route.extend({
+  geolocation: Ember.inject.service(),
   currentUser: Ember.inject.service(),
+
+  actions: {
+    getUserLocation() {
+      this.get('geolocation').getLocation().then((geoObject) => {
+        var currentLocation = this.get('geolocation').get('currentLocation');
+
+        console.log(currentLocation);
+
+        this.set('userLocation', currentLocation);
+      });
+    }
+  },
 
   async model() {
     let zipCode = this.get('currentUser.user.zipCode');
