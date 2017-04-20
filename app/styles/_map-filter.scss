@@ -1,26 +1,25 @@
+.map-container {
+  font-family: 'Fjalla One', sans-serif;
+}
 
 .map-header {
   text-align: center;
   font-size: 1.25rem;
 
   &__attention {
-    font-family: $font-nav;
     color: $black;
     margin-bottom: 0;
   }
 
   &__direction {
-    font-family:$font-nav;
     color: $black;
     font-size: 1.25rem;
     margin-top: $gutter / 2;
   }
 
   &__filter {
-    font-family: $font-nav;
     color: $c-lightgrey;
     font-size: 1.5rem;
-
   }
 
 }
@@ -43,27 +42,21 @@
     border-radius: 50%;
     height: 8rem;
     width: 8rem;
-    filter: invert(100%);
+
 
     &:hover {
-
-      background-color: $c-app-lightblue;
-
+      background-color: $appSecondary;
     }
   }
+}
+
+.filter-icon {
+  filter: invert(100%);
 }
 
 .map-section {
   padding: $gutter;
 }
-
-// .map {
-//     background-color: $c-app-lightblue;
-//     height: 600px;
-//     width: 100%;
-//     display: flex;
-//     align-items: center;
-// }
 
 .leaflet-map {
   height: 550px;
@@ -109,8 +102,7 @@
     text-align: center;
     font-size: 1.5rem;
     margin: 0;
-    color: $c-app-lightblue;
-    font-family: $font-nav;
+    color: $appSecondary;
   }
 
   &__details {
@@ -120,7 +112,7 @@
   }
 
   &__availability {
-    font-family: $font-nav;
+
   }
 
   &__activities {
@@ -133,12 +125,11 @@
   width: 0.75rem;
   flex-basis: calc(100% / 3 - 1rem);
   filter: invert(100%);
-  background: $appPrimary;
+  background: $appThird;
   border-radius: 50%;
   margin: 0.5rem;
 }
 
 .results-container {
   max-width: 50rem;
-  // text-align: center;
 }
