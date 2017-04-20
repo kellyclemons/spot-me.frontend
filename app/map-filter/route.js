@@ -1,19 +1,36 @@
 import Ember from 'ember';
+import { task, timeout } from 'ember-concurrency';
 
 
 export default Ember.Route.extend({
   geolocation: Ember.inject.service(),
   currentUser: Ember.inject.service(),
 
+  init() {
+    this._super(...arguments);
+
+    this.get('updateLocation').perform();
+  },
+
+  updateLocation: task(function * () {
+
+    while (true) {
+      const geoObject = yield this.get('geolocation').getLocation();
+
+      const [latitude, longitude] = this.get('geolocation').get('currentLocation');
+      const me = this.get('currentUser.user');
+
+      me.setProperties({ latitude, longitude });
+      me.save();
+
+      // Wait for 30 seconds
+      yield timeout(30 * 1000);
+    }
+  }).restartable(),
+
   actions: {
     getUserLocation() {
-      this.get('geolocation').getLocation().then((geoObject) => {
-        var currentLocation = this.get('geolocation').get('currentLocation');
-
-        console.log(currentLocation);
-
-        this.set('userLocation', currentLocation);
-      });
+      this.get('updateLocation').perform();
     }
   },
 
