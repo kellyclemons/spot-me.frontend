@@ -9,14 +9,10 @@ export default Ember.Controller.extend({
         return alert('Form data is invalid');
       }
 
-      changeset.save();
-    },
-
-    saveAndContinue() {
-      this.model.save().then(() => {
+      await changeset.save().then(() => {
         this.transitionToRoute('map-filter');
       });
-    }
+    },
   }
 
 });
