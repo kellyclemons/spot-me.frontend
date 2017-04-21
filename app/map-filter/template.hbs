@@ -58,22 +58,26 @@
                 <p class="results-card__details">{{profile.gender}} - {{profile.ageRange}}</p>
               </div>
 
-              <div class="wizard">
-                <p class="headline">{{profile.name}}'s Activities</p>
-                <ul class="wizard-list">
-                  {{#each profile.activities as |activity|}}
-                    <li class="wizard-list__item">{{activity}}</li>
-                  {{/each}}
-                </ul>
-              </div>
+              <div class="user-details">
 
-              <div class="wizard">
-                <p class="headline">{{profile.name}}'s Availability</p>
-                <ul class="wizard-list">
-                  {{#each profile.availabilities as |availability|}}
-                    <li class="wizard-list__item">{{availability}}</li>
-                  {{/each}}
-                </ul>
+                <div class="wizard-card">
+                  <p class="wizard-card__headline">Activities</p>
+                  <ul class="wizard-list">
+                    {{#each profile.activities as |activity|}}
+                      <li class="wizard-list__item">{{activity}}</li>
+                    {{/each}}
+                  </ul>
+                </div>
+
+                <div class="wizard-card">
+                  <p class="wizard-card__headline">Availability</p>
+                  <ul class="wizard-list">
+                    {{#each profile.availabilities as |availability|}}
+                      <li class="wizard-list__item">{{availability}}</li>
+                    {{/each}}
+                  </ul>
+                </div>
+
               </div>
 
             </div>
