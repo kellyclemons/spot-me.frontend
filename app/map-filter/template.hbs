@@ -2,12 +2,11 @@
 <div class="section">
   <div class="container">
     <div class="map-header">
-      <h1 class="map-header__attention">Find <span class="workout-partners">Workout Partners</span> Near You</h1>
-      <button type="button" {{action 'getUserLocation'}}>Find My Location!</button>
+      <h1 class="map-header__attention">Find <span class="workout-partners">Workout Partners</span> Near You!</h1>
+      <button type="button" {{action 'getUserLocation'}} class="map-location">Click to Find My Location!</button>
       {{#if userLocation}}
         {{userLocation}}
       {{/if}}
-      <h2 class="map-header__direction">(Try clicking a filter below to get started!)</h2>
 
       <div class="filter-set">
         {{!-- actions on each button? --}}
@@ -17,6 +16,8 @@
         <button type="button" class="filter-set__button"><img src="./images/man-lifting-icon.png" alt="" class="filter-icon"></button>
 
       </div>
+
+      <h2 class="map-header__direction">(Try clicking one of the filters to get started!)</h2>
 
     </div>
 

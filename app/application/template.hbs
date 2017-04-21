@@ -19,6 +19,9 @@
         {{!-- {{#if session.isAuthenticate}} --}}
           {{#link-to 'map-filter' class="navbar-right__item orange"}}Map{{/link-to}}
         {{!-- {{/if}} --}}
+        {{!-- {{#if session.isAuthenticate}} --}}
+          {{#link-to 'edit' class="navbar-right__item orange"}}Edit Profile{{/link-to}}
+        {{!-- {{/if}} --}}
         {{#if session.isAuthenticated}}
           <button class="navbar-right__item nav-login" {{action 'logout'}}>Log Out</button>
         {{else}}
