@@ -10,6 +10,12 @@ export default Ember.Controller.extend({
       }
 
       changeset.save();
+    },
+
+    saveAndContinue() {
+      this.model.save().then(() => {
+        this.transitionToRoute('map-filter');
+      });
     }
   }
 

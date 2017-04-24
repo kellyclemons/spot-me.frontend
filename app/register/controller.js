@@ -4,6 +4,8 @@ export default Ember.Controller.extend({
   session: Ember.inject.service(),
 
   actions: {
+    forms: {},
+
     async registerUser() {
       const user = this.store.createRecord('user', this.model);
       const {email, password} = this.model;
@@ -21,7 +23,7 @@ export default Ember.Controller.extend({
       } catch (e) {
         this.set('errorMessage', ' Invalid Email or Password');
       }
-
+      // this.set('forms', {});
       this.transitionToRoute('profile.activities');
     }
   }

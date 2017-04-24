@@ -1,6 +1,8 @@
 import Ember from 'ember';
 
 export default Ember.Controller.extend({
+  forms: {},
+
   availabilities:
     [
       'Sunday',
@@ -9,7 +11,7 @@ export default Ember.Controller.extend({
       'Wednesday',
       'Thursday',
       'Friday',
-      'Saturday'
+      'Saturday',
     ],
 
     choices: [],
@@ -24,7 +26,7 @@ export default Ember.Controller.extend({
       },
 
       saveAndContinue() {
-        this.model.set('availabilities', this.choices.map(({name}) => name));
+        this.model.set('availabilities', this.choices);
 
         this.model.save().then(() => {
           this.transitionToRoute('profile.zipcode');

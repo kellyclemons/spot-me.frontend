@@ -1,16 +1,17 @@
+.map-container {
+  font-family: 'Fjalla One', sans-serif;
+}
 
 .map-header {
   text-align: center;
   font-size: 1.25rem;
 
   &__attention {
-    font-family: $font-nav;
     color: $black;
     margin-bottom: 0;
   }
 
   &__direction {
-    font-family:$font-nav;
     color: $black;
     font-size: 1.25rem;
     margin-top: $gutter;
@@ -18,12 +19,9 @@
   }
 
   &__filter {
-    font-family: $font-nav;
     color: $c-lightgrey;
     font-size: 1.5rem;
-
   }
-
 }
 
 .map-location {
@@ -47,36 +45,32 @@
   justify-content: space-around;
   padding: $gutter;
   margin-bottom: $gutter;
+
   margin-top: $gutter * 2;
+  min-width: 28rem;
 
   &__button {
     color: $white;
-    background-color: $appThird;
+    background-color: $appSecondary;
     border: none;
     border-radius: 50%;
     height: 8rem;
     width: 8rem;
-    filter: invert(100%);
+
 
     &:hover {
-
-      background-color: $c-app-lightblue;
-
+      background-color: $appThird;
     }
   }
+}
+
+.filter-icon {
+  filter: invert(100%);
 }
 
 .map-section {
   padding: $gutter;
 }
-
-// .map {
-//     background-color: $c-app-lightblue;
-//     height: 600px;
-//     width: 100%;
-//     display: flex;
-//     align-items: center;
-// }
 
 .leaflet-map {
   height: 550px;
@@ -93,20 +87,21 @@
 
 
 .results-grid {
-  background-color: $c-lightgrey;
   display: flex;
   flex-direction: row;
+  justify-content: center;
   flex-wrap: wrap;
   margin-top: $gutter;
 
   &__item {
-    margin: 0.5rem;
-    flex-basis: calc(100% / 3 - 1rem);
+    margin: 0.5rem 0.5rem 1rem 0.5rem;
   }
 }
 
 .results-card {
-  background-color: $white;
+  background-color: $appThird;
+  width: 20rem;
+  height: 20rem;
   padding: $gutter / 2;
   box-shadow: 0.2rem 0.2rem 0.8rem rgba(0, 0, 0, 0.5);
 
@@ -122,18 +117,17 @@
     text-align: center;
     font-size: 1.5rem;
     margin: 0;
-    color: $c-app-lightblue;
-    font-family: $font-nav;
+    color: $white;
   }
 
   &__details {
     font-size: 1rem;
     margin: 0;
-    color: #999;
+    color: $white;
   }
 
   &__availability {
-    font-family: $font-nav;
+
   }
 
   &__activities {
@@ -146,12 +140,53 @@
   width: 0.75rem;
   flex-basis: calc(100% / 3 - 1rem);
   filter: invert(100%);
-  background: $appPrimary;
+  background: $appThird;
   border-radius: 50%;
   margin: 0.5rem;
 }
 
 .results-container {
-  max-width: 50rem;
-  // text-align: center;
+  // max-width: 50rem;
+}
+
+.user-details {
+  display: flex;
+  justify-content: center;
+}
+
+.wizard-card {
+  margin: 0.5rem;
+
+  &__headline {
+    font-size: 1.1rem;
+    color: $appSecondary;
+    margin: 0;
+    padding-right: 0.2rem;
+    line-height: 1rem;
+    text-align: center;
+  }
+}
+
+.edit-headline {
+  font-size: 0.7rem;
+}
+
+.underline-only {
+  text-decoration: underline;
+}
+
+.headline {
+  display: flex;
+}
+
+.wizard-list__item {
+  justify-content: center;
+  margin: 1rem;
+  flex-grow: 1;
+  display: flex;
+  color: $white;
+  background: $appSecondary;
+  box-shadow: 0.2rem 0.2rem 0.4rem rgba(0, 0, 0, 0.5);
+  padding: 0.4rem;
+  width: 7rem;
 }

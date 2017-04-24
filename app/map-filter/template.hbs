@@ -9,18 +9,14 @@
       {{/if}}
 
       <div class="filter-set">
-        {{!-- actions on each button? --}}
-
         <button type="button" class="filter-set__button"><img src="./images/running-icon.png" alt="" class="filter-icon"></button>
         <button type="button" class="filter-set__button"><img src="./images/cyclist-icon.png" alt="" class="filter-icon"></button>
         <button type="button" class="filter-set__button"><img src="./images/man-lifting-icon.png" alt="" class="filter-icon"></button>
-
       </div>
 
       <h2 class="map-header__direction">(Try clicking one of the filters to get started!)</h2>
 
     </div>
-
   </div>
 
   <div class="map-section">
@@ -33,7 +29,6 @@
 
           {{#each model as |profile|}}
             {{#marker-layer location=(point-array profile.latitude profile.longitude)}}
-            {{!-- {{#marker-layer location=currentLocation}} --}}
               {{#popup-layer}}
                 <div class="results-card__info">
                   <h2 class="results-card__name">{{profile.name}}</h2>
@@ -62,12 +57,29 @@
               <h2 class="results-card__name">{{profile.name}}</h2>
               <p class="results-card__details">{{profile.gender}} - {{profile.ageRange}}</p>
             </div>
-            <p class="results-card__availability">{{profile.availability}}</p>
-            <div class="results-card__activities">
-              <img src="./images/man-lifting-icon.png" alt="" class="activity-icon">
-              <img src="./images/man-lifting-icon.png" alt="" class="activity-icon">
-              <img src="./images/man-lifting-icon.png" alt="" class="activity-icon">
+
+            <div class="user-details">
+
+              <div class="wizard-card">
+                <p class="wizard-card__headline">Activities</p>
+                <ul class="wizard-list">
+                  {{#each profile.activities as |activity|}}
+                    <li class="wizard-list__item">{{activity}}</li>
+                  {{/each}}
+                </ul>
+              </div>
+
+              <div class="wizard-card">
+                <p class="wizard-card__headline">Availability</p>
+                <ul class="wizard-list">
+                  {{#each profile.availabilities as |availability|}}
+                    <li class="wizard-list__item">{{availability}}</li>
+                  {{/each}}
+                </ul>
+              </div>
+
             </div>
+
           </div>
         </div>
       {{/each}}

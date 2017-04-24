@@ -12,16 +12,17 @@
           <form {{action "saveProfile" forms on="submit"}} action="save-profile" on="submit" class="input-container">
             {{input value=forms.name class="content-form__input" type="text" placeholder="Name"}}
             {{input value=forms.email class="content-form__input" type="text" placeholder="Email"}}
+
             <select class="content-form__input" type="text" placeholder="Age Range" onchange= {{action (mut forms.ageRange) value="target.value"}}>
                 <option class="content-form__option" value="ageRange">Age Range</option>
                 <option value="ageRange">18-24</option>
-                <option value="ageRactivity">25-34</option>
-                <option value="ageRactivity">35-44</option>
-                <option value="ageRactivity">45-54</option>
-                <option value="ageRactivity">55-64</option>
+                <option value="ageRange">25-34</option>
+                <option value="ageRange">35-44</option>
+                <option value="ageRange">45-54</option>
+                <option value="ageRange">55-64</option>
               </select>
             <select class="content-form__input" type="text" placeholder="Gender" onchange= {{action (mut forms.gender) value="target.value"}}>
-                <option class="content-form__option" value="Male">Gender</option>
+                <option class="content-form__option" value="gender">Gender</option>
                 <option value="Male">Male</option>
                 <option value="Female">Female</option>
               </select>
@@ -29,30 +30,34 @@
             <textarea id="bio" class="content-form__input" name="name" rows="8" maxlength="500" placeholder="Bio"></textarea>
             {{!-- {{input value=forms.activities class="content-form__input" type="text" placeholder="Activities"}} --}}
 
-            <select multiple class="content-form__input" type="text" placeholder="Activities" onchange= {{action (mut forms.activities) value="target.value"}}>
-                <option class="content-form__option" value="acavailability">Activities</option>
-                <option value="activity">Running</option>
-                <option value="activity">Hiking</option>
-                <option value="activity">Cycling</option>
-                <option value="activity">Swimming</option>
-                <option value="activity">Tennis</option>
-                <option value="activity">Yoga</option>
-                <option value="activity">Lifting</option>
-                <option value="activity">Golfing</option>
-                <option value="activity">Boxing</option>
-              </select>
 
-            <select multiple class="content-form__input multiple__input" type="text" placeholder="Availability" onchange= {{action (mut forms.availability) value="target.value"}}>
-                <option class="content-form__option" value="availability">Availability</option>
-                <option value="availability">Sunday</option>
-                <option value="availability">Monday</option>
-                <option value="availability">Tuesday</option>
-                <option value="availability">Wednesday</option>
-                <option value="availability">Thursday</option>
-                <option value="availability">Friday</option>
-                <option value="availability">Saturday</option>
-              </select>
-            {{#link-to 'map-filter' class="content-form__submit"}}Save Changes{{/link-to}}
+          <div class="wizard">
+            <div class="headline">
+            <p class="wizard-headline">My Activities</p>
+            <p class="wizard-headline edit-headline">{{#link-to "profile.activities"}}(<span class="underline-only">edit</span>){{/link-to}}</p>
+            </div>
+            <ul class="wizard-list">
+              {{#each model.activities as |activity|}}
+                <li class="wizard-list__item">{{activity}}</li>
+              {{/each}}
+            </ul>
+          </div>
+
+          <div class="wizard">
+            <div class="headline">
+            <p class="wizard-headline">My Availability</p>
+            <p class="wizard-headline edit-headline">{{#link-to "profile.availability"}}(<span class="underline-only">edit</span>){{/link-to}}</p>
+            </div>
+            <ul class="wizard-list">
+              {{#each model.availabilities as |availability|}}
+                <li class="wizard-list__item">{{availability}}</li>
+              {{/each}}
+            </ul>
+
+
+            </div>
+
+            <button type="submit" {{action "saveAndContinue"}} class="content-form__submit">Save Changes</button>
           </form>
         </div>
       {{/with}}
