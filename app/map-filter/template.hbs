@@ -30,15 +30,17 @@
             {{#each model as |profile|}}
               {{#marker-layer location=(point-array profile.latitude profile.longitude)}}
                 {{#popup-layer}}
-                  <div class="results-card__info">
-                    <h2 class="results-card__name">{{profile.name}}</h2>
-                    <p class="results-card__details">{{profile.gender}} - {{profile.ageRange}}</p>
+                  <div class="quick-view__info">
+                    <h2 class="quick-view__name">{{profile.name}}</h2>
+                    <p class="quick-view__details">{{profile.gender}} - {{profile.ageRange}}</p>
                   </div>
                   <p class="results-card__availability">{{profile.availability}}</p>
                   <div class="results-card__activities">
-                    <img src="./images/man-lifting-icon.png" alt="" class="activity-icon">
-                    <img src="./images/man-lifting-icon.png" alt="" class="activity-icon">
-                    <img src="./images/man-lifting-icon.png" alt="" class="activity-icon">
+                    <ul class="wizard-list">
+                      {{#each profile.activities as |activity|}}
+                        <li class="wizard-list__item">{{activity}}</li>
+                      {{/each}}
+                    </ul>
                   </div>
                 {{/popup-layer}}
               {{/marker-layer}}

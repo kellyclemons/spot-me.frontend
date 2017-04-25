@@ -176,3 +176,14 @@
   padding: 0.4rem;
   width: 7rem;
 }
+
+.quick-view__name {
+  text-align: center;
+  color: $appThird;
+}
+
+.quick-view__details {
+  text-align: center;
+  color: $appSecondary;
+  margin: 0;
+}
