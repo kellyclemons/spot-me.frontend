@@ -14,7 +14,8 @@
   &__direction {
     color: $black;
     font-size: 1.25rem;
-    margin-top: $gutter / 2;
+    margin-top: $gutter;
+    margin-bottom: 0;
   }
 
   &__filter {
@@ -23,21 +24,34 @@
   }
 }
 
+.map-location {
+  border: 0;
+  background-color: $appSecondary;
+  color: $white;
+  padding: $gutter / 2;
+  font-size: 1rem;
+  margin-top: $gutter;
+  cursor: pointer;
+
+}
+
 .workout-partners {
-  color: $appSecondary;
+  color: $c-app-primary;
 }
 
 .filter-set {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  padding: $gutter * 2 $gutter;
+  padding: $gutter;
   margin-bottom: $gutter;
+
+  margin-top: $gutter * 2;
   min-width: 28rem;
 
   &__button {
     color: $white;
-    background-color: $appThird;
+    background-color: $appSecondary;
     border: none;
     border-radius: 50%;
     height: 8rem;
@@ -45,7 +59,7 @@
 
 
     &:hover {
-      background-color: $appSecondary;
+      background-color: $appThird;
     }
   }
 }

@@ -5,7 +5,7 @@ module.exports = function(environment) {
   let ENV = {
 
     DS: {
-      host: 'http://localhost:8080',
+      host: 'http://spotme-api.herokuapp.com',
     },
 
     modulePrefix: 'spot-me',
