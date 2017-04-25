@@ -58,7 +58,37 @@
               <p class="results-card__details">{{profile.gender}} - {{profile.ageRange}}</p>
             </div>
 
+    <div class="map-section">
+      <h2 class="map-header__filter">Currently Filtering Users Who Also Enjoy: {{activities}} <span class="workout-partners">Swimming</span></h2>
+      <div class="map">
+        {{#if currentUser.user.zipLatitude}}
+
+          {{#leaflet-map lat=currentUser.user.zipLatitude lng=currentUser.user.zipLongitude zoom=12 scrollWheelZoom=false class="leaflet-map" }}
+            {{tile-layer url="http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png"}}
+
+            {{#each model as |profile|}}
+              {{#marker-layer location=(point-array profile.latitude profile.longitude)}}
+                {{#popup-layer}}
+                  <div class="quick-view__info">
+                    <h2 class="quick-view__name">{{profile.name}}</h2>
+                    <p class="quick-view__details">{{profile.gender}} - {{profile.ageRange}}</p>
+                  </div>
+                  <p class="results-card__availability">{{profile.availability}}</p>
+                  <div class="results-card__activities">
+                    <ul class="wizard-list">
+                      {{#each profile.activities as |activity|}}
+                        <li class="wizard-list__item">{{activity}}</li>
+                      {{/each}}
+                    </ul>
+                  </div>
+                {{/popup-layer}}
+              {{/marker-layer}}
+            {{/each}}
+          {{/leaflet-map}}
+        {{/if}}
+
             <div class="user-details">
+
 
               <div class="wizard-card">
                 <p class="wizard-card__headline">Activities</p>
