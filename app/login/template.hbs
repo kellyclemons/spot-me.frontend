@@ -13,12 +13,12 @@
         <form {{action 'authenticate' on='submit'}} class="login-card__form">
           <p class="form-control">
             {{!-- {{input type="text" placeholder="Email" class="login-card__control" value=model.email}} --}}
-            <label for="identification">Login</label>
+            {{!-- <label for="identification">Login</label> --}}
             {{input id='identification' placeholder='Email' value=identification class="login-card__control"}}
             {{!-- {{fa-icon 'envelope'}} --}}
           </p>
           <p class="form-control">
-            <label for="password">Password</label>
+            {{!-- <label for="password">Password</label> --}}
             {{input id='password' placeholder='Password' type='password' value=password class="login-card__control"}}
           </p>
           {{#if errorMessage}}
